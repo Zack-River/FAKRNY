@@ -1,0 +1,10 @@
+C:\Users\Zack River\Desktop\Git\FAKRNY\FAKRNY\bin\Debug\FAKRNY.exe.config
+C:\Users\Zack River\Desktop\Git\FAKRNY\FAKRNY\bin\Debug\FAKRNY.exe
+C:\Users\Zack River\Desktop\Git\FAKRNY\FAKRNY\bin\Debug\FAKRNY.pdb
+C:\Users\Zack River\Desktop\Git\FAKRNY\FAKRNY\obj\Debug\FAKRNY.csproj.AssemblyReference.cache
+C:\Users\Zack River\Desktop\Git\FAKRNY\FAKRNY\obj\Debug\FAKRNY.Form1.resources
+C:\Users\Zack River\Desktop\Git\FAKRNY\FAKRNY\obj\Debug\FAKRNY.Properties.Resources.resources
+C:\Users\Zack River\Desktop\Git\FAKRNY\FAKRNY\obj\Debug\FAKRNY.csproj.GenerateResource.cache
+C:\Users\Zack River\Desktop\Git\FAKRNY\FAKRNY\obj\Debug\FAKRNY.csproj.CoreCompileInputs.cache
+C:\Users\Zack River\Desktop\Git\FAKRNY\FAKRNY\obj\Debug\FAKRNY.exe
+C:\Users\Zack River\Desktop\Git\FAKRNY\FAKRNY\obj\Debug\FAKRNY.pdb
