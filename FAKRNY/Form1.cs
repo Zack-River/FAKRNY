@@ -1,4 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace FAKRNY
@@ -9,6 +12,19 @@ namespace FAKRNY
         public Form1()
         {
             InitializeComponent();
+        }
+        private string ComputeHash(string rawData)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+                String builder = string.Empty;
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder += bytes[i].ToString("x2");
+                }
+                return builder;
+            }
         }
         private bool CheckViabilty(string s)
         {
@@ -47,7 +63,7 @@ namespace FAKRNY
                 Directory.CreateDirectory(File_ext);
                 using (StreamWriter sw = File.CreateText(File_ext + ".txt"))
                 {
-                    sw.WriteLine(Sign_Up_Password_TextBox.Text);
+                    sw.WriteLine(ComputeHash(Sign_Up_Password_TextBox.Text));
                 }
             }
             else
