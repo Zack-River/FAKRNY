@@ -31,3 +31,4 @@ C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.cspr
 C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.exe
 C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.pdb
 C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.SignUp.resources
+C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.FakarnyPage.resources
