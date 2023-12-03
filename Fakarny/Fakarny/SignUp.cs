@@ -227,27 +227,28 @@ namespace Fakarny
             #endregion
             #region Password Check
             done = false;
-            if (SignUp_Password_Textbox.Text.Length < 6)
-                {
-                    Invalid_Password.Show();
-                    Star3.Show();
-                SignUp_Password_Textbox.Text = "Password";
-                Invalid_Password.Text = "Your password Can't be less than 6 chars";
-                }
-                else if (SignUp_Password_Textbox.Text == "")
-                {
-                    Invalid_Password.Show();
-                    Star3.Show();
+            if (SignUp_Password_Textbox.Text == "")
+            {
+                Invalid_Password.Show();
+                Star3.Show();
                 SignUp_Password_Textbox.Text = "Password";
                 Invalid_Password.Text = "Your password Can't be Empty";
-                }
-                else if(SignUp_Password_Textbox.Text == "Password")
+            }
+            else if (SignUp_Password_Textbox.Text == "Password")
+            {
+                Invalid_Password.Show();
+                Star3.Show();
+                SignUp_Password_Textbox.Text = "Password";
+                Invalid_Password.Text = "Your password Can't be \" Password \"";
+            }
+            else if (SignUp_Password_Textbox.Text.Length < 6 || SignUp_Password_Textbox.Text.Length > 32)
                 {
                     Invalid_Password.Show();
                     Star3.Show();
                 SignUp_Password_Textbox.Text = "Password";
-                Invalid_Password.Text = "Your password Can't be \" Password \"";
+                Invalid_Password.Text = "Your password Can't be less than 6 chars or more than 32";
                 }
+                
                 else
                 {
                     Invalid_Password.Hide();
