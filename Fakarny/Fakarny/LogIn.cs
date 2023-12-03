@@ -56,7 +56,11 @@ namespace Fakarny
                 Login_Password_TextBox.Text = "Password";
                 Login_UserName_TextBox.ForeColor = Color.FromArgb(149, 149, 149);
                 Login_Password_TextBox.ForeColor = Color.FromArgb(149, 149, 149);
-                MessageBox.Show("Welcome " + name,"Loged In");
+                //MessageBox.Show("Welcome " + name,"Loged In");
+                FakarnyPage fk = new FakarnyPage();
+                this.Hide();
+                fk.ShowDialog();
+                this.Close();
             }
             else
             {
