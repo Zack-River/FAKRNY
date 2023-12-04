@@ -315,6 +315,7 @@ namespace Fakarny
 
     }
     //A class for the Encryption/Decryption of text
+    #region Encryptor
     public class Encryptor
     {
         private byte[] IV = { 196, 105, 10, 83, 65, 63, 165, 46, 109, 166, 141, 17, 94, 109, 146, 235 };
@@ -370,4 +371,5 @@ namespace Fakarny
             }
         }
     }
+    #endregion
 }
