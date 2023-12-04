@@ -33,12 +33,12 @@
             this.SignUp_Confirm_Password_Label = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.Invalid_Password = new System.Windows.Forms.Label();
             this.SignUp_Password_Textbox = new System.Windows.Forms.TextBox();
+            this.Invalid_Password = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.Invalid_Username_Label = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.SignUp_Username_Textbox = new System.Windows.Forms.TextBox();
+            this.Invalid_Username_Label = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.SignUp_Fullname_Label = new System.Windows.Forms.Label();
             this.Username_UnderLine_Panel = new System.Windows.Forms.Panel();
@@ -124,15 +124,6 @@
             this.panel8.Size = new System.Drawing.Size(233, 1);
             this.panel8.TabIndex = 4;
             // 
-            // Invalid_Password
-            // 
-            this.Invalid_Password.ForeColor = System.Drawing.Color.Red;
-            this.Invalid_Password.Location = new System.Drawing.Point(156, 374);
-            this.Invalid_Password.Name = "Invalid_Password";
-            this.Invalid_Password.Size = new System.Drawing.Size(235, 23);
-            this.Invalid_Password.TabIndex = 0;
-            this.Invalid_Password.Text = "Invalid Password";
-            // 
             // SignUp_Password_Textbox
             // 
             this.SignUp_Password_Textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
@@ -148,6 +139,15 @@
             this.SignUp_Password_Textbox.Enter += new System.EventHandler(this.Password_Enter);
             this.SignUp_Password_Textbox.Leave += new System.EventHandler(this.Password_Leave);
             // 
+            // Invalid_Password
+            // 
+            this.Invalid_Password.ForeColor = System.Drawing.Color.Red;
+            this.Invalid_Password.Location = new System.Drawing.Point(156, 374);
+            this.Invalid_Password.Name = "Invalid_Password";
+            this.Invalid_Password.Size = new System.Drawing.Size(238, 40);
+            this.Invalid_Password.TabIndex = 0;
+            this.Invalid_Password.Text = "Invalid Password";
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panel5);
@@ -156,15 +156,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(236, 41);
             this.panel4.TabIndex = 3;
-            // 
-            // Invalid_Username_Label
-            // 
-            this.Invalid_Username_Label.ForeColor = System.Drawing.Color.Red;
-            this.Invalid_Username_Label.Location = new System.Drawing.Point(156, 288);
-            this.Invalid_Username_Label.Name = "Invalid_Username_Label";
-            this.Invalid_Username_Label.Size = new System.Drawing.Size(235, 23);
-            this.Invalid_Username_Label.TabIndex = 0;
-            this.Invalid_Username_Label.Text = "Invalid Username";
             // 
             // panel5
             // 
@@ -188,6 +179,15 @@
             this.SignUp_Username_Textbox.TextChanged += new System.EventHandler(this.Username_Changed);
             this.SignUp_Username_Textbox.Enter += new System.EventHandler(this.Username_Enter);
             this.SignUp_Username_Textbox.Leave += new System.EventHandler(this.Username_Leave);
+            // 
+            // Invalid_Username_Label
+            // 
+            this.Invalid_Username_Label.ForeColor = System.Drawing.Color.Red;
+            this.Invalid_Username_Label.Location = new System.Drawing.Point(156, 288);
+            this.Invalid_Username_Label.Name = "Invalid_Username_Label";
+            this.Invalid_Username_Label.Size = new System.Drawing.Size(238, 37);
+            this.Invalid_Username_Label.TabIndex = 0;
+            this.Invalid_Username_Label.Text = "Invalid Username";
             // 
             // panel3
             // 
