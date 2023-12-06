@@ -31,18 +31,10 @@ C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.cspr
 C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.exe
 C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.pdb
 C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.SignUp.resources
-C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\bin\Debug\Fakarny.exe.config
-C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\bin\Debug\Fakarny.exe
-C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\bin\Debug\Fakarny.pdb
-C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.AssemblyReference.cache
-C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.FakarnyPage.resources
-C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.Login_Form.resources
-C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.Properties.Resources.resources
-C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.SignUp.resources
-C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.GenerateResource.cache
-C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.CoreCompileInputs.cache
-C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.exe
-C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.pdb
+C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.FakarnyPage.resources
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\bin\Debug\Fakarny.exe.config
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\bin\Debug\Fakarny.exe
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\bin\Debug\Fakarny.pdb
 C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.AssemblyReference.cache
 C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.FakarnyPage.resources
 C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.Login_Form.resources
@@ -52,3 +44,9 @@ C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.
 C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.CoreCompileInputs.cache
 C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.exe
 C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.pdb
+D:\Programming\PROJECTS\Github Projects\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.FakarnyPage.resources
+D:\Programming\PROJECTS\Github Projects\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.SignUp.resources
+D:\Programming\PROJECTS\Github Projects\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.UserControls.Add_Account.resources
+D:\Programming\PROJECTS\Github Projects\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.UserControls.Edit_Account.resources
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.UserControls.Add_Account.resources
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.UserControls.Edit_Account.resources

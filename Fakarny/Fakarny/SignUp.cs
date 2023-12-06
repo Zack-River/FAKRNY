@@ -1,17 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fakarny
 {
     public partial class SignUp : Form
     {
-        string Program_path, File_ext;
+        string Program_path , File_ext;
 
-        public SignUp(string Program_path, string File_ext)
+        public SignUp(string Program_path , string File_ext)
         {
             this.Program_path = Program_path;
             this.File_ext = File_ext;
@@ -38,7 +43,7 @@ namespace Fakarny
 
             for (int i = 0; i < s.Length; i++)
             {
-                if (!((s[i] < 58 && s[i] > 47) || (s[i] < 91 && s[i] > 64) || (s[i] < 123 && s[i] > 96) || s[i] == 95))
+                if (!((s[i] < 58 && s[i] > 47) || (s[i] < 91 && s[i] > 64) || (s[i] < 123 && s[i] > 96) || s[i] == 95 ))
                 {
                     return false;
                 }
@@ -173,7 +178,7 @@ namespace Fakarny
         #region SignUp
         private void SignUp_Button_Click(object sender, EventArgs e)
         {
-            bool done = false;
+            bool fn = false;
             #region Fullname Check
             if (SignUp_Fullname_Textbox.Text == "" || SignUp_Fullname_Textbox.Text == "Full name")
             {
@@ -185,21 +190,21 @@ namespace Fakarny
             {
                 Invalid_Fullname.Hide();
                 Star1.Hide();
-                done = true;
+                fn = true;
             }
             #endregion
             string temp_username = ComputeHash(SignUp_Username_Textbox.Text);
             File_ext = Program_path + "\\data\\" + temp_username;
             #region Username Check
-            done = false;
+            bool un = false;
             if (SignUp_Username_Textbox.Text == "" || SignUp_Username_Textbox.Text == "Username")
             {
                 Star2.Show();
                 Invalid_Username_Label.Show();
                 SignUp_Username_Textbox.Text = "Username";
-                Invalid_Username_Label.Text = "Username Can't be empty";
+                Invalid_Username_Label.Text = "Username Can't be empty" ;
             }
-            else if (!CheckViabilty(SignUp_Username_Textbox.Text))
+            else if(!CheckViabilty(SignUp_Username_Textbox.Text))
             {
                 Star2.Show();
                 Invalid_Username_Label.Show();
@@ -215,21 +220,14 @@ namespace Fakarny
             }
             else
             {
-                done = true;
+                un = true;
                 Star2.Hide();
                 Invalid_Username_Label.Hide();
             }
             #endregion
             #region Password Check
-            done = false;
-            if (SignUp_Password_Textbox.Text.Length < 6)
-            {
-                Invalid_Password.Show();
-                Star3.Show();
-                SignUp_Password_Textbox.Text = "Password";
-                Invalid_Password.Text = "Your password Can't be less than 6 chars";
-            }
-            else if (SignUp_Password_Textbox.Text == "")
+            bool pc = false;
+            if (SignUp_Password_Textbox.Text == "")
             {
                 Invalid_Password.Show();
                 Star3.Show();
@@ -243,30 +241,38 @@ namespace Fakarny
                 SignUp_Password_Textbox.Text = "Password";
                 Invalid_Password.Text = "Your password Can't be \" Password \"";
             }
-            else
-            {
-                Invalid_Password.Hide();
-                Star3.Hide();
-                done = true;
-            }
+            else if (SignUp_Password_Textbox.Text.Length < 6 || SignUp_Password_Textbox.Text.Length > 32)
+                {
+                    Invalid_Password.Show();
+                    Star3.Show();
+                SignUp_Password_Textbox.Text = "Password";
+                Invalid_Password.Text = "Your password Can't be less than 6 chars or more than 32";
+                }
+                
+                else
+                {
+                    Invalid_Password.Hide();
+                    Star3.Hide();
+                    pc = true;
+                }
             #endregion
             #region Confirmation
-            done = false;
-            if (!(SignUp_Confirm_Password_Textbox.Text == SignUp_Password_Textbox.Text))
-            {
-                Star4.Show();
-                Password_Matching.Text = "Password must match";
+            bool con = false;
+                if(!(SignUp_Confirm_Password_Textbox.Text == SignUp_Password_Textbox.Text))
+                {
+                    Star4.Show();
+                    Password_Matching.Text = "Password must match";
                 SignUp_Confirm_Password_Textbox.Text = "Confirm Password";
                 Password_Matching.Show();
-            }
-            else
-            {
-                Star4.Hide();
-                Password_Matching.Hide();
-                done = true;
-            }
+                }
+                else
+                {
+                    Star4.Hide();
+                    Password_Matching.Hide();
+                con = true;
+                }
             #endregion
-            if (done)
+            if (fn && un && pc && con)
             {
                 if (!Directory.Exists(Program_path + "\\data"))
                 {
@@ -277,9 +283,8 @@ namespace Fakarny
                 {
                     sw.Write(ComputeHash(SignUp_Password_Textbox.Text));
                 }
-                using (StreamWriter sw = File.CreateText(File_ext + "\\" + "Info" + ".txt"))
+                using (StreamWriter sw = File.CreateText(File_ext +"\\"+"Info"+ ".txt"))
                 {
-                    //we can use the Encrytor class here----------
                     sw.WriteLine(SignUp_Fullname_Textbox.Text);
                 }
 
@@ -291,17 +296,16 @@ namespace Fakarny
                 this.Close();
             }
 
-
         }
 
         private void Mouse_Hover(object sender, EventArgs e)
         {
-            SignUp_Button.ForeColor = Color.FromArgb(36, 36, 36);
+            SignUp_Button.ForeColor = Color.FromArgb(36,36,36);
         }
 
         private void Mouse_LEAVE(object sender, EventArgs e)
         {
-            SignUp_Button.ForeColor = Color.FromArgb(149, 149, 149);
+            SignUp_Button.ForeColor = Color.FromArgb(149,149,149);
         }
         #endregion
 
@@ -314,62 +318,4 @@ namespace Fakarny
         #endregion
 
     }
-    //A class for the Encryption/Decryption of text
-    #region Encryptor
-    public class Encryptor
-    {
-        private byte[] IV = { 196, 105, 10, 83, 65, 63, 165, 46, 109, 166, 141, 17, 94, 109, 146, 235 };
-        private byte[] KeyByte;
-        private byte[] Encrypted;
-        private Aes aes = Aes.Create();
-
-
-        public Encryptor(string Key)
-        {
-            for (int i = Key.Length; i < 32; i++)
-            {
-                Key += '0';
-            }
-            this.KeyByte = Encoding.UTF8.GetBytes(Key);
-            aes.Mode = CipherMode.CBC;
-        }
-
-        public string Encrypt(string plaintext)
-        {
-            using (ICryptoTransform encryptor = aes.CreateEncryptor(KeyByte, IV))
-            {
-                byte[] plaintextBytes = Encoding.UTF8.GetBytes(plaintext);
-                Encrypted = encryptor.TransformFinalBlock(plaintextBytes, 0, plaintextBytes.Length);
-                return Encoding.UTF8.GetString(Encrypted);
-            }
-        }
-
-        public string Decrypt()
-        {
-            using (ICryptoTransform decryptor = aes.CreateDecryptor(KeyByte, IV))
-            {
-                byte[] decryptedBytes = decryptor.TransformFinalBlock(Encrypted, 0, Encrypted.Length);
-                string decryptedText = Encoding.UTF8.GetString(decryptedBytes);
-                return decryptedText;
-            }
-        }
-
-        public string Key
-        {
-            get
-            {
-                return Encoding.UTF8.GetString(KeyByte);
-            }
-
-            set
-            {
-                for (int i = value.Length; i < 32; i++)
-                {
-                    value += '0';
-                }
-                KeyByte = Encoding.UTF8.GetBytes(value);
-            }
-        }
-    }
-    #endregion
 }

@@ -141,6 +141,6 @@ namespace Fakarny
         {
             Program_path = Directory.GetCurrentDirectory();
         }
-        
+
     }
 }
