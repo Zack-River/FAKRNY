@@ -43,3 +43,12 @@ C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.G
 C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.exe
 C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.pdb
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.AssemblyReference.cache
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.FakarnyPage.resources
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.Login_Form.resources
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.Properties.Resources.resources
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.SignUp.resources
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.GenerateResource.cache
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.CoreCompileInputs.cache
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.exe
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.pdb
