@@ -39,7 +39,6 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Move_Panel = new System.Windows.Forms.Panel();
-            this.Show_Button = new System.Windows.Forms.Button();
             this.Save_Password_Button = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.New_Password_Textbox = new System.Windows.Forms.TextBox();
@@ -175,20 +174,6 @@
             this.Move_Panel.Name = "Move_Panel";
             this.Move_Panel.Size = new System.Drawing.Size(340, 52);
             this.Move_Panel.TabIndex = 38;
-            // 
-            // Show_Button
-            // 
-            this.Show_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.Show_Button.FlatAppearance.BorderSize = 2;
-            this.Show_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.Show_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Show_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.Show_Button.Location = new System.Drawing.Point(0, 0);
-            this.Show_Button.Name = "Show_Button";
-            this.Show_Button.Size = new System.Drawing.Size(165, 42);
-            this.Show_Button.TabIndex = 26;
-            this.Show_Button.Text = "Show More";
-            this.Show_Button.UseVisualStyleBackColor = true;
             // 
             // Save_Password_Button
             // 
@@ -380,7 +365,6 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel Move_Panel;
-        private System.Windows.Forms.Button Show_Button;
         private System.Windows.Forms.Button Save_Password_Button;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox New_Password_Textbox;
