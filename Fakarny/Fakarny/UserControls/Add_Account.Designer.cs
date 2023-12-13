@@ -39,6 +39,8 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Move_Panel = new System.Windows.Forms.Panel();
+            this.show_less_bt = new System.Windows.Forms.Button();
+            this.Show_Button = new System.Windows.Forms.Button();
             this.Save_Password_Button = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.New_Password_Textbox = new System.Windows.Forms.TextBox();
@@ -135,6 +137,9 @@
             this.textBox2.Size = new System.Drawing.Size(233, 18);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "Phone Number";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_Changed);
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // panel13
             // 
@@ -165,15 +170,47 @@
             this.textBox1.Size = new System.Drawing.Size(233, 18);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Recovery Email";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_Changed);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // Move_Panel
             // 
+            this.Move_Panel.Controls.Add(this.show_less_bt);
             this.Move_Panel.Controls.Add(this.Show_Button);
             this.Move_Panel.Controls.Add(this.Save_Password_Button);
             this.Move_Panel.Location = new System.Drawing.Point(81, 409);
             this.Move_Panel.Name = "Move_Panel";
             this.Move_Panel.Size = new System.Drawing.Size(340, 52);
             this.Move_Panel.TabIndex = 38;
+            // 
+            // show_less_bt
+            // 
+            this.show_less_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.show_less_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.show_less_bt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.show_less_bt.Location = new System.Drawing.Point(0, 0);
+            this.show_less_bt.Name = "show_less_bt";
+            this.show_less_bt.Size = new System.Drawing.Size(165, 42);
+            this.show_less_bt.TabIndex = 28;
+            this.show_less_bt.Text = "Show less";
+            this.show_less_bt.UseVisualStyleBackColor = true;
+            this.show_less_bt.Visible = false;
+            // 
+            // Show_Button
+            // 
+            this.Show_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.Show_Button.FlatAppearance.BorderSize = 2;
+            this.Show_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.Show_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Show_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.Show_Button.Location = new System.Drawing.Point(0, 0);
+            this.Show_Button.Name = "Show_Button";
+            this.Show_Button.Size = new System.Drawing.Size(165, 42);
+            this.Show_Button.TabIndex = 26;
+            this.Show_Button.Text = "Show More";
+            this.Show_Button.UseVisualStyleBackColor = true;
+            this.Show_Button.Click += new System.EventHandler(this.Show_Button_Click);
             // 
             // Save_Password_Button
             // 
@@ -188,6 +225,7 @@
             this.Save_Password_Button.TabIndex = 27;
             this.Save_Password_Button.Text = "Save Account";
             this.Save_Password_Button.UseVisualStyleBackColor = true;
+            this.Save_Password_Button.Click += new System.EventHandler(this.Save_Password_Button_Click);
             // 
             // panel7
             // 
@@ -206,6 +244,9 @@
             this.New_Password_Textbox.Name = "New_Password_Textbox";
             this.New_Password_Textbox.Size = new System.Drawing.Size(340, 25);
             this.New_Password_Textbox.TabIndex = 35;
+            this.New_Password_Textbox.TextChanged += new System.EventHandler(this.New_Password_Textbox_Changed);
+            this.New_Password_Textbox.Enter += new System.EventHandler(this.New_Password_Textbox_Enter);
+            this.New_Password_Textbox.Leave += new System.EventHandler(this.New_Password_Textbox_Leave);
             // 
             // Password
             // 
@@ -255,6 +296,9 @@
             this.New_User_Id_Textbox.Size = new System.Drawing.Size(233, 18);
             this.New_User_Id_Textbox.TabIndex = 2;
             this.New_User_Id_Textbox.Text = "username or email id";
+            this.New_User_Id_Textbox.TextChanged += new System.EventHandler(this.New_User_Id_Textbox_Changed);
+            this.New_User_Id_Textbox.Enter += new System.EventHandler(this.New_User_Id_Textbox_Enter);
+            this.New_User_Id_Textbox.Leave += new System.EventHandler(this.New_User_Id_Textbox_Leave);
             // 
             // label2
             // 
@@ -296,6 +340,9 @@
             this.New_Name_Textbox.Size = new System.Drawing.Size(233, 18);
             this.New_Name_Textbox.TabIndex = 2;
             this.New_Name_Textbox.Text = "website or app name";
+            this.New_Name_Textbox.TextChanged += new System.EventHandler(this.New_Name_Textbox_Changed);
+            this.New_Name_Textbox.Enter += new System.EventHandler(this.New_Name_Textbox_Enter);
+            this.New_Name_Textbox.Leave += new System.EventHandler(this.New_Name_Textbox_Leave);
             // 
             // SignUp_Fullname_Label
             // 
@@ -336,6 +383,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Add_Account";
             this.Size = new System.Drawing.Size(503, 681);
+            this.Load += new System.EventHandler(this.Add_Account_Load);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -379,5 +427,7 @@
         private System.Windows.Forms.TextBox New_Name_Textbox;
         private System.Windows.Forms.Label SignUp_Fullname_Label;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button show_less_bt;
+        private System.Windows.Forms.Button Show_Button;
     }
 }

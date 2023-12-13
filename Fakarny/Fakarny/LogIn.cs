@@ -57,7 +57,7 @@ namespace Fakarny
                 Login_UserName_TextBox.ForeColor = Color.FromArgb(149, 149, 149);
                 Login_Password_TextBox.ForeColor = Color.FromArgb(149, 149, 149);
                 //MessageBox.Show("Welcome " + name,"Loged In");
-                FakarnyPage fk = new FakarnyPage();
+                FakarnyPage fk = new FakarnyPage(Program_path+"\\data\\", File_ext);
                 this.Hide();
                 fk.ShowDialog();
                 this.Close();
@@ -136,6 +136,10 @@ namespace Fakarny
             this.Show();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         private void Form1_Load(object sender, System.EventArgs e)
         {

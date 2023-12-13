@@ -307,6 +307,13 @@ namespace Fakarny
         {
             SignUp_Button.ForeColor = Color.FromArgb(149,149,149);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
         #endregion
 
         //Have An Account

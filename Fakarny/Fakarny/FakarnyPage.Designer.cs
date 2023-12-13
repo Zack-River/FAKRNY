@@ -151,6 +151,7 @@
             this.Name_Label.Size = new System.Drawing.Size(84, 20);
             this.Name_Label.TabIndex = 14;
             this.Name_Label.Text = "App Name";
+            this.Name_Label.Click += new System.EventHandler(this.Name_Label_Click);
             // 
             // Add_Acc_Button
             // 
@@ -235,6 +236,7 @@
             this.edit_Account1.Name = "edit_Account1";
             this.edit_Account1.Size = new System.Drawing.Size(503, 681);
             this.edit_Account1.TabIndex = 1;
+            this.edit_Account1.Load += new System.EventHandler(this.edit_Account1_Load);
             // 
             // add_Account1
             // 

@@ -33,11 +33,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.invalid_phone = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.invalid_mail = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Move_Panel = new System.Windows.Forms.Panel();
+            this.show_less_bt = new System.Windows.Forms.Button();
             this.Show_Button = new System.Windows.Forms.Button();
             this.Save_Password_Button = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -47,13 +50,16 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.New_User_Id_Textbox = new System.Windows.Forms.TextBox();
+            this.invalid_id = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Username_UnderLine_Panel = new System.Windows.Forms.Panel();
             this.New_Name_Textbox = new System.Windows.Forms.TextBox();
+            this.invalid_name = new System.Windows.Forms.Label();
             this.SignUp_Fullname_Label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.invalid_pass = new System.Windows.Forms.Label();
             this.panel17.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -70,7 +76,7 @@
             this.panel17.Controls.Add(this.panel13);
             this.panel17.Location = new System.Drawing.Point(37, 483);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(318, 100);
+            this.panel17.Size = new System.Drawing.Size(318, 107);
             this.panel17.TabIndex = 48;
             this.panel17.Visible = false;
             // 
@@ -99,10 +105,11 @@
             // panel15
             // 
             this.panel15.Controls.Add(this.panel16);
+            this.panel15.Controls.Add(this.invalid_phone);
             this.panel15.Controls.Add(this.textBox2);
-            this.panel15.Location = new System.Drawing.Point(82, 5);
+            this.panel15.Location = new System.Drawing.Point(79, 5);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(236, 37);
+            this.panel15.Size = new System.Drawing.Size(236, 45);
             this.panel15.TabIndex = 21;
             // 
             // panel16
@@ -112,6 +119,17 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(233, 1);
             this.panel16.TabIndex = 4;
+            // 
+            // invalid_phone
+            // 
+            this.invalid_phone.AutoSize = true;
+            this.invalid_phone.ForeColor = System.Drawing.Color.Red;
+            this.invalid_phone.Location = new System.Drawing.Point(3, 27);
+            this.invalid_phone.Name = "invalid_phone";
+            this.invalid_phone.Size = new System.Drawing.Size(75, 13);
+            this.invalid_phone.TabIndex = 55;
+            this.invalid_phone.Text = "Invalid Phone!";
+            this.invalid_phone.Visible = false;
             // 
             // textBox2
             // 
@@ -125,15 +143,30 @@
             this.textBox2.Size = new System.Drawing.Size(233, 18);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "Phone Number";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_Changed);
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // panel13
             // 
+            this.panel13.Controls.Add(this.invalid_mail);
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Controls.Add(this.textBox1);
             this.panel13.Location = new System.Drawing.Point(79, 56);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(236, 37);
+            this.panel13.Size = new System.Drawing.Size(236, 48);
             this.panel13.TabIndex = 23;
+            // 
+            // invalid_mail
+            // 
+            this.invalid_mail.AutoSize = true;
+            this.invalid_mail.ForeColor = System.Drawing.Color.Red;
+            this.invalid_mail.Location = new System.Drawing.Point(3, 27);
+            this.invalid_mail.Name = "invalid_mail";
+            this.invalid_mail.Size = new System.Drawing.Size(69, 13);
+            this.invalid_mail.TabIndex = 56;
+            this.invalid_mail.Text = "Invalid Email!";
+            this.invalid_mail.Visible = false;
             // 
             // panel14
             // 
@@ -155,15 +188,32 @@
             this.textBox1.Size = new System.Drawing.Size(233, 18);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Recovery Email";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_Changed);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // Move_Panel
             // 
+            this.Move_Panel.Controls.Add(this.show_less_bt);
             this.Move_Panel.Controls.Add(this.Show_Button);
             this.Move_Panel.Controls.Add(this.Save_Password_Button);
             this.Move_Panel.Location = new System.Drawing.Point(81, 409);
             this.Move_Panel.Name = "Move_Panel";
             this.Move_Panel.Size = new System.Drawing.Size(340, 52);
             this.Move_Panel.TabIndex = 49;
+            // 
+            // show_less_bt
+            // 
+            this.show_less_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.show_less_bt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.show_less_bt.Location = new System.Drawing.Point(0, 0);
+            this.show_less_bt.Name = "show_less_bt";
+            this.show_less_bt.Size = new System.Drawing.Size(165, 42);
+            this.show_less_bt.TabIndex = 28;
+            this.show_less_bt.Text = "Show less";
+            this.show_less_bt.UseVisualStyleBackColor = true;
+            this.show_less_bt.Visible = false;
+            this.show_less_bt.Click += new System.EventHandler(this.show_less_bt_Click);
             // 
             // Show_Button
             // 
@@ -178,6 +228,7 @@
             this.Show_Button.TabIndex = 26;
             this.Show_Button.Text = "Show More";
             this.Show_Button.UseVisualStyleBackColor = true;
+            this.Show_Button.Click += new System.EventHandler(this.Show_Button_Click);
             // 
             // Save_Password_Button
             // 
@@ -192,6 +243,7 @@
             this.Save_Password_Button.TabIndex = 27;
             this.Save_Password_Button.Text = "Save Account";
             this.Save_Password_Button.UseVisualStyleBackColor = true;
+            this.Save_Password_Button.Click += new System.EventHandler(this.Save_Password_Button_Click);
             // 
             // panel7
             // 
@@ -208,8 +260,12 @@
             this.New_Password_Textbox.Location = new System.Drawing.Point(81, 360);
             this.New_Password_Textbox.Multiline = true;
             this.New_Password_Textbox.Name = "New_Password_Textbox";
+            this.New_Password_Textbox.PasswordChar = '*';
             this.New_Password_Textbox.Size = new System.Drawing.Size(340, 25);
             this.New_Password_Textbox.TabIndex = 46;
+            this.New_Password_Textbox.TextChanged += new System.EventHandler(this.New_Password_Textbox_Changed);
+            this.New_Password_Textbox.Enter += new System.EventHandler(this.New_Password_Textbox_Enter);
+            this.New_Password_Textbox.Leave += new System.EventHandler(this.New_Password_Textbox_Leave);
             // 
             // Password
             // 
@@ -234,9 +290,10 @@
             // 
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.New_User_Id_Textbox);
+            this.panel4.Controls.Add(this.invalid_id);
             this.panel4.Location = new System.Drawing.Point(109, 234);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(236, 37);
+            this.panel4.Size = new System.Drawing.Size(236, 48);
             this.panel4.TabIndex = 42;
             // 
             // panel5
@@ -259,6 +316,20 @@
             this.New_User_Id_Textbox.Size = new System.Drawing.Size(233, 18);
             this.New_User_Id_Textbox.TabIndex = 2;
             this.New_User_Id_Textbox.Text = "username or email id";
+            this.New_User_Id_Textbox.TextChanged += new System.EventHandler(this.New_User_Id_Textbox_Changed);
+            this.New_User_Id_Textbox.Enter += new System.EventHandler(this.New_User_Id_Textbox_Enter);
+            this.New_User_Id_Textbox.Leave += new System.EventHandler(this.New_User_Id_Textbox_Leave);
+            // 
+            // invalid_id
+            // 
+            this.invalid_id.AutoSize = true;
+            this.invalid_id.ForeColor = System.Drawing.Color.Red;
+            this.invalid_id.Location = new System.Drawing.Point(4, 27);
+            this.invalid_id.Name = "invalid_id";
+            this.invalid_id.Size = new System.Drawing.Size(55, 13);
+            this.invalid_id.TabIndex = 53;
+            this.invalid_id.Text = "Invalid ID!";
+            this.invalid_id.Visible = false;
             // 
             // label2
             // 
@@ -275,9 +346,10 @@
             // 
             this.panel3.Controls.Add(this.Username_UnderLine_Panel);
             this.panel3.Controls.Add(this.New_Name_Textbox);
+            this.panel3.Controls.Add(this.invalid_name);
             this.panel3.Location = new System.Drawing.Point(109, 177);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(236, 37);
+            this.panel3.Size = new System.Drawing.Size(236, 51);
             this.panel3.TabIndex = 40;
             // 
             // Username_UnderLine_Panel
@@ -300,6 +372,20 @@
             this.New_Name_Textbox.Size = new System.Drawing.Size(233, 18);
             this.New_Name_Textbox.TabIndex = 2;
             this.New_Name_Textbox.Text = "website or app name";
+            this.New_Name_Textbox.TextChanged += new System.EventHandler(this.New_Name_Textbox_Changed);
+            this.New_Name_Textbox.Enter += new System.EventHandler(this.New_Name_Textbox_Enter);
+            this.New_Name_Textbox.Leave += new System.EventHandler(this.New_Name_Textbox_Leave);
+            // 
+            // invalid_name
+            // 
+            this.invalid_name.AutoSize = true;
+            this.invalid_name.ForeColor = System.Drawing.Color.Red;
+            this.invalid_name.Location = new System.Drawing.Point(4, 27);
+            this.invalid_name.Name = "invalid_name";
+            this.invalid_name.Size = new System.Drawing.Size(72, 13);
+            this.invalid_name.TabIndex = 52;
+            this.invalid_name.Text = "Invalid Name!";
+            this.invalid_name.Visible = false;
             // 
             // SignUp_Fullname_Label
             // 
@@ -332,11 +418,23 @@
             this.panel1.Size = new System.Drawing.Size(50, 50);
             this.panel1.TabIndex = 50;
             // 
+            // invalid_pass
+            // 
+            this.invalid_pass.AutoSize = true;
+            this.invalid_pass.ForeColor = System.Drawing.Color.Red;
+            this.invalid_pass.Location = new System.Drawing.Point(310, 331);
+            this.invalid_pass.Name = "invalid_pass";
+            this.invalid_pass.Size = new System.Drawing.Size(90, 13);
+            this.invalid_pass.TabIndex = 54;
+            this.invalid_pass.Text = "Invalid Password!";
+            this.invalid_pass.Visible = false;
+            // 
             // Edit_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.Controls.Add(this.invalid_pass);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel17);
             this.Controls.Add(this.Move_Panel);
@@ -350,7 +448,8 @@
             this.Controls.Add(this.SignUp_Fullname_Label);
             this.Controls.Add(this.label1);
             this.Name = "Edit_Account";
-            this.Size = new System.Drawing.Size(503, 681);
+            this.Size = new System.Drawing.Size(907, 681);
+            this.Load += new System.EventHandler(this.Edit_Account_Load);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -395,5 +494,11 @@
         private System.Windows.Forms.Label SignUp_Fullname_Label;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button show_less_bt;
+        private System.Windows.Forms.Label invalid_phone;
+        private System.Windows.Forms.Label invalid_mail;
+        private System.Windows.Forms.Label invalid_id;
+        private System.Windows.Forms.Label invalid_name;
+        private System.Windows.Forms.Label invalid_pass;
     }
 }
