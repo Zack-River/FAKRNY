@@ -1,29 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Fakarny.UserControls
 {
     public partial class Edit_Account : UserControl
     {
-        string Program_path, site_name;
-        bool name=false, id=false, pass=false, phone=false, email=false;
-        
+        string Program_path, site_name, Key;
+        bool name = false, id = false, pass = false, phone = false, email = false;
+
         public Edit_Account()
         {
             InitializeComponent();
         }
 
+        public string Program_Path
+        {
+            get
+            {
+                return this.Program_path;
+            }
+            set
+            {
+                this.Program_path = value;
+            }
+        }
+        public string key
+        {
+            get
+            {
+                return this.Key;
+            }
+            set
+            {
+                this.Key = value;
+            }
+        }
         private void Show_Button_Click(object sender, EventArgs e)
         {
             Move_Panel.Location = new System.Drawing.Point(81, 610);
@@ -66,7 +79,7 @@ namespace Fakarny.UserControls
             name = true;
         }
 
-       
+
 
         private void New_User_Id_Textbox_Enter(object sender, EventArgs e)
         {
@@ -117,77 +130,70 @@ namespace Fakarny.UserControls
         }
 
 
-        private void textBox1_Enter(object sender, EventArgs e)
+        private void New_Recovery_Email_Textbox_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox1.Text == "Recovery Email")
+            if (New_Recovery_Email_Textbox.Text == "" || New_Recovery_Email_Textbox.Text == "Recovery Email")
             {
-                textBox1.Text = "";
+                New_Recovery_Email_Textbox.Text = "";
             }
         }
-        private void textBox1_Leave(object sender, EventArgs e)
+        private void New_Recovery_Email_Textbox_Leave(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox1.Text == "Recovery Email")
+            if (New_Recovery_Email_Textbox.Text == "" || New_Recovery_Email_Textbox.Text == "Recovery Email")
             {
-                textBox1.Text = "Recovery Email";
-                textBox1.ForeColor = Color.FromArgb(149, 149, 149);
+                New_Recovery_Email_Textbox.Text = "Recovery Email";
+                New_Recovery_Email_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
                 return;
             }
         }
-        private void textBox1_Changed(object sender, EventArgs e)
+        private void New_Recovery_Email_Textbox_Changed(object sender, EventArgs e)
         {
-            textBox1.ForeColor = Color.White;
+            New_Recovery_Email_Textbox.ForeColor = Color.White;
             email = true;
         }
 
 
-        private void textBox2_Changed(object sender, EventArgs e)
+        private void New_Phone_Textbox_Changed(object sender, EventArgs e)
         {
-            textBox2.ForeColor = Color.White;
+            New_Phone_Textbox.ForeColor = Color.White;
             if (show_less_bt.Visible)
                 phone = true;
         }
-        private void textBox2_Enter(object sender, EventArgs e)
+        private void New_Phone_Textbox_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text == "" || textBox2.Text == "Phone Number")
+            if (New_Phone_Textbox.Text == "" || New_Phone_Textbox.Text == "Phone Number")
             {
-                textBox2.Text = "";
+                New_Phone_Textbox.Text = "";
             }
         }
-        private void textBox2_Leave(object sender, EventArgs e)
+        private void New_Phone_Textbox_Leave(object sender, EventArgs e)
         {
-            if (textBox2.Text == "" || textBox2.Text == "Phone Number")
+            if (New_Phone_Textbox.Text == "" || New_Phone_Textbox.Text == "Phone Number")
             {
-                textBox2.Text = "Phone Number";
-                textBox2.ForeColor = Color.FromArgb(149, 149, 149);
+                New_Phone_Textbox.Text = "Phone Number";
+                New_Phone_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
                 return;
             }
         }
 
         private void Save_Password_Button_Click(object sender, EventArgs e)
         {
-
-            if (validation())
+            Encryptor enc = new Encryptor(Key);
+            string en = enc.Path_Safe_Encrypt(New_Name_Textbox.Text);
+            enc.IVGenerate();
+            //string hashen = SignUp.ComputeHash(en);
+            //using (StreamWriter sr = File.AppendText(Program_path + "\\Index.txt"))
+            //{
+            //    sr.WriteLine(en);
+            //    sr.WriteLine(hashen);
+            //}
+            using (StreamWriter sr = File.CreateText(Program_path + "\\" + en + ".txt"))
             {
-                string site_name = Program_path + New_Name_Textbox.Text + "\\data";
-                string pass = site_name + "\\important";
-                Directory.CreateDirectory(pass);
-                Directory.CreateDirectory(site_name);
-                using (StreamWriter sw = File.CreateText(pass + "\\" + "pass" + ".txt"))
-                {
-                    sw.Write(New_Password_Textbox.Text);
-                }
-                using (StreamWriter sw = File.CreateText(site_name + "\\" + "details" + ".txt"))
-                {
-                    sw.WriteLine(New_Name_Textbox.Text);
-                    sw.WriteLine(New_User_Id_Textbox.Text);
-                    sw.WriteLine(textBox2.Text);
-                    sw.WriteLine(textBox1.Text);
-                }
-            }
-
-            else
-            {
-                validation();
+                sr.WriteLine(enc.IV);
+                sr.WriteLine(enc.Encrypt(New_User_Id_Textbox.Text));
+                sr.WriteLine(enc.Encrypt(New_Password_Textbox.Text));
+                sr.WriteLine(enc.Encrypt(New_Phone_Textbox.Text));
+                sr.WriteLine(enc.Encrypt(New_Recovery_Email_Textbox.Text));
             }
         }
 
@@ -247,7 +253,7 @@ namespace Fakarny.UserControls
 
         }
 
-        
+
     }
 
 }

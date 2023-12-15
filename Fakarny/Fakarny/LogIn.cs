@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fakarny
 {
     public partial class Login_Form : Form
     {
-        string Program_path = "", File_ext;
+        string Program_path, PassWord;
         public Login_Form()
         {
             InitializeComponent();
@@ -41,11 +35,12 @@ namespace Fakarny
 
         private void Login_Button_Click(object sender, EventArgs e)
         {
+            PassWord = Login_Password_TextBox.Text;
             string Input_Username = SignUp.ComputeHash(Login_UserName_TextBox.Text);
-            string Input_Password = SignUp.ComputeHash(Login_Password_TextBox.Text);
-            string filePath = Program_path + "\\data\\" + Input_Username+ ".txt";
+            string Input_Password = SignUp.ComputeHash(PassWord);
+            string filePath = Program_path + "\\data\\" + Input_Username + ".txt";
 
-            if(File.Exists(Program_path+"\\data\\" + Input_Username + ".txt") && File.ReadAllText(filePath) == Input_Password)
+            if (File.Exists(Program_path + "\\data\\" + Input_Username + ".txt") && File.ReadAllText(filePath) == Input_Password)
             {
                 Invalid_Username_Label.Hide();
                 Login_Username_Error_Panel.Visible = false;
@@ -57,7 +52,7 @@ namespace Fakarny
                 Login_UserName_TextBox.ForeColor = Color.FromArgb(149, 149, 149);
                 Login_Password_TextBox.ForeColor = Color.FromArgb(149, 149, 149);
                 //MessageBox.Show("Welcome " + name,"Loged In");
-                FakarnyPage fk = new FakarnyPage(Program_path+"\\data\\", File_ext);
+                FakarnyPage fk = new FakarnyPage(Program_path + "\\data\\" + Input_Username, PassWord);
                 this.Hide();
                 fk.ShowDialog();
                 this.Close();
@@ -79,7 +74,7 @@ namespace Fakarny
         {
             if (Login_UserName_TextBox.Text == "" || Login_UserName_TextBox.Text == "Username")
             {
-                
+
                 Login_UserName_TextBox.Text = "Username";
                 Login_UserName_TextBox.ForeColor = Color.FromArgb(149, 149, 149);
                 return;
@@ -130,7 +125,7 @@ namespace Fakarny
 
         private void Create_New_Acount_Link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            SignUp signUp = new SignUp( Program_path, File_ext);
+            SignUp signUp = new SignUp(Program_path, "1");
             this.Hide();
             signUp.ShowDialog();
             this.Show();

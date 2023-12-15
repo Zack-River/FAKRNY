@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Show_Name_Combobox = new System.Windows.Forms.ComboBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.View_Contents_Button = new System.Windows.Forms.Button();
             this.Copy_Password_Button = new System.Windows.Forms.Button();
@@ -43,8 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Accounts_List_Label = new System.Windows.Forms.Label();
             this.Tabs_Panel = new System.Windows.Forms.FlowLayoutPanel();
-            this.edit_Account1 = new Fakarny.UserControls.Edit_Account();
             this.add_Account1 = new Fakarny.UserControls.Add_Account();
+            this.edit_Account1 = new Fakarny.UserControls.Edit_Account();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.Tabs_Panel.SuspendLayout();
@@ -53,6 +54,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel1.Controls.Add(this.Show_Name_Combobox);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.Add_Acc_Button);
             this.panel1.Controls.Add(this.panel3);
@@ -65,6 +67,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(755, 681);
             this.panel1.TabIndex = 3;
+            // 
+            // Show_Name_Combobox
+            // 
+            this.Show_Name_Combobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.Show_Name_Combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Show_Name_Combobox.FormattingEnabled = true;
+            this.Show_Name_Combobox.Location = new System.Drawing.Point(27, 210);
+            this.Show_Name_Combobox.Name = "Show_Name_Combobox";
+            this.Show_Name_Combobox.Size = new System.Drawing.Size(611, 45);
+            this.Show_Name_Combobox.TabIndex = 19;
             // 
             // panel9
             // 
@@ -86,7 +98,7 @@
             this.View_Contents_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.View_Contents_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.View_Contents_Button.ForeColor = System.Drawing.Color.White;
-            this.View_Contents_Button.Location = new System.Drawing.Point(616, 4);
+            this.View_Contents_Button.Location = new System.Drawing.Point(616, 3);
             this.View_Contents_Button.Name = "View_Contents_Button";
             this.View_Contents_Button.Size = new System.Drawing.Size(82, 55);
             this.View_Contents_Button.TabIndex = 19;
@@ -101,7 +113,7 @@
             this.Copy_Password_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Copy_Password_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Copy_Password_Button.ForeColor = System.Drawing.Color.White;
-            this.Copy_Password_Button.Location = new System.Drawing.Point(528, 4);
+            this.Copy_Password_Button.Location = new System.Drawing.Point(529, 3);
             this.Copy_Password_Button.Name = "Copy_Password_Button";
             this.Copy_Password_Button.Size = new System.Drawing.Size(82, 55);
             this.Copy_Password_Button.TabIndex = 19;
@@ -115,7 +127,7 @@
             this.Copy_Username_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Copy_Username_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Copy_Username_Button.ForeColor = System.Drawing.Color.White;
-            this.Copy_Username_Button.Location = new System.Drawing.Point(440, 4);
+            this.Copy_Username_Button.Location = new System.Drawing.Point(441, 3);
             this.Copy_Username_Button.Name = "Copy_Username_Button";
             this.Copy_Username_Button.Size = new System.Drawing.Size(82, 55);
             this.Copy_Username_Button.TabIndex = 19;
@@ -135,7 +147,7 @@
             this.User_Id_Label.AutoSize = true;
             this.User_Id_Label.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.User_Id_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.User_Id_Label.Location = new System.Drawing.Point(4, 36);
+            this.User_Id_Label.Location = new System.Drawing.Point(3, 38);
             this.User_Id_Label.Name = "User_Id_Label";
             this.User_Id_Label.Size = new System.Drawing.Size(59, 14);
             this.User_Id_Label.TabIndex = 14;
@@ -157,7 +169,7 @@
             // 
             this.Add_Acc_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Add_Acc_Button.ForeColor = System.Drawing.Color.White;
-            this.Add_Acc_Button.Location = new System.Drawing.Point(518, 608);
+            this.Add_Acc_Button.Location = new System.Drawing.Point(518, 599);
             this.Add_Acc_Button.Name = "Add_Acc_Button";
             this.Add_Acc_Button.Size = new System.Drawing.Size(207, 46);
             this.Add_Acc_Button.TabIndex = 7;
@@ -169,7 +181,7 @@
             // 
             this.panel3.BackgroundImage = global::Fakarny.Properties.Resources.Search1;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(482, 29);
+            this.panel3.Location = new System.Drawing.Point(486, 29);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(30, 30);
             this.panel3.TabIndex = 5;
@@ -180,7 +192,7 @@
             this.Search_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Search_Textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search_Textbox.ForeColor = System.Drawing.Color.White;
-            this.Search_Textbox.Location = new System.Drawing.Point(518, 29);
+            this.Search_Textbox.Location = new System.Drawing.Point(521, 27);
             this.Search_Textbox.Multiline = true;
             this.Search_Textbox.Name = "Search_Textbox";
             this.Search_Textbox.Size = new System.Drawing.Size(207, 30);
@@ -221,30 +233,34 @@
             // Tabs_Panel
             // 
             this.Tabs_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.Tabs_Panel.Controls.Add(this.edit_Account1);
             this.Tabs_Panel.Controls.Add(this.add_Account1);
+            this.Tabs_Panel.Controls.Add(this.edit_Account1);
             this.Tabs_Panel.Dock = System.Windows.Forms.DockStyle.Right;
             this.Tabs_Panel.Location = new System.Drawing.Point(761, 0);
             this.Tabs_Panel.Name = "Tabs_Panel";
             this.Tabs_Panel.Size = new System.Drawing.Size(503, 681);
             this.Tabs_Panel.TabIndex = 4;
             // 
-            // edit_Account1
-            // 
-            this.edit_Account1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.edit_Account1.Location = new System.Drawing.Point(3, 3);
-            this.edit_Account1.Name = "edit_Account1";
-            this.edit_Account1.Size = new System.Drawing.Size(503, 681);
-            this.edit_Account1.TabIndex = 1;
-            this.edit_Account1.Load += new System.EventHandler(this.edit_Account1_Load);
-            // 
             // add_Account1
             // 
             this.add_Account1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.add_Account1.Location = new System.Drawing.Point(3, 690);
+            this.add_Account1.Location = new System.Drawing.Point(4, 5);
+            this.add_Account1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.add_Account1.Name = "add_Account1";
             this.add_Account1.Size = new System.Drawing.Size(503, 681);
             this.add_Account1.TabIndex = 0;
+            this.add_Account1.Load += new System.EventHandler(this.add_Account1_Load);
+            // 
+            // edit_Account1
+            // 
+            this.edit_Account1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.edit_Account1.key = null;
+            this.edit_Account1.Location = new System.Drawing.Point(4, 696);
+            this.edit_Account1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.edit_Account1.Name = "edit_Account1";
+            this.edit_Account1.Program_Path = null;
+            this.edit_Account1.Size = new System.Drawing.Size(503, 681);
+            this.edit_Account1.TabIndex = 1;
             // 
             // FakarnyPage
             // 
@@ -284,5 +300,6 @@
         private System.Windows.Forms.Button Copy_Password_Button;
         private UserControls.Edit_Account edit_Account1;
         private UserControls.Add_Account add_Account1;
+        private System.Windows.Forms.ComboBox Show_Name_Combobox;
     }
 }
