@@ -197,6 +197,7 @@ namespace Fakarny.UserControls
 
         public void Enter_data()
         {
+            NameChange = false;
             New_Name_Textbox.Text = data.Site_Name;
             New_User_Id_Textbox.Text = data.User_Name;
             New_Password_Textbox.Text = data.Password;
