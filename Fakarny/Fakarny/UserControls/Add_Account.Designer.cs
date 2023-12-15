@@ -34,10 +34,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.New_Phone_Textbox = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.New_Recovery_Email_Textbox = new System.Windows.Forms.TextBox();
             this.Move_Panel = new System.Windows.Forms.Panel();
             this.show_less_bt = new System.Windows.Forms.Button();
             this.Show_Button = new System.Windows.Forms.Button();
@@ -111,7 +111,7 @@
             // panel15
             // 
             this.panel15.Controls.Add(this.panel16);
-            this.panel15.Controls.Add(this.textBox2);
+            this.panel15.Controls.Add(this.New_Phone_Textbox);
             this.panel15.Location = new System.Drawing.Point(82, 5);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(236, 37);
@@ -125,26 +125,26 @@
             this.panel16.Size = new System.Drawing.Size(233, 1);
             this.panel16.TabIndex = 4;
             // 
-            // textBox2
+            // New_Phone_Textbox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.textBox2.Location = new System.Drawing.Point(3, 3);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 18);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "Phone Number";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_Changed);
-            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
-            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
+            this.New_Phone_Textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.New_Phone_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.New_Phone_Textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.New_Phone_Textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.New_Phone_Textbox.Location = new System.Drawing.Point(3, 3);
+            this.New_Phone_Textbox.Multiline = true;
+            this.New_Phone_Textbox.Name = "New_Phone_Textbox";
+            this.New_Phone_Textbox.Size = new System.Drawing.Size(233, 18);
+            this.New_Phone_Textbox.TabIndex = 2;
+            this.New_Phone_Textbox.Text = "Phone Number";
+            this.New_Phone_Textbox.TextChanged += new System.EventHandler(this.New_Phone_Textbox_Changed);
+            this.New_Phone_Textbox.Enter += new System.EventHandler(this.New_Phone_Textbox_Enter);
+            this.New_Phone_Textbox.Leave += new System.EventHandler(this.New_Phone_Textbox_Leave);
             // 
             // panel13
             // 
             this.panel13.Controls.Add(this.panel14);
-            this.panel13.Controls.Add(this.textBox1);
+            this.panel13.Controls.Add(this.New_Recovery_Email_Textbox);
             this.panel13.Location = new System.Drawing.Point(79, 56);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(236, 37);
@@ -158,21 +158,21 @@
             this.panel14.Size = new System.Drawing.Size(233, 1);
             this.panel14.TabIndex = 4;
             // 
-            // textBox1
+            // New_Recovery_Email_Textbox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 18);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Recovery Email";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_Changed);
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.New_Recovery_Email_Textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.New_Recovery_Email_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.New_Recovery_Email_Textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.New_Recovery_Email_Textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.New_Recovery_Email_Textbox.Location = new System.Drawing.Point(3, 3);
+            this.New_Recovery_Email_Textbox.Multiline = true;
+            this.New_Recovery_Email_Textbox.Name = "New_Recovery_Email_Textbox";
+            this.New_Recovery_Email_Textbox.Size = new System.Drawing.Size(233, 18);
+            this.New_Recovery_Email_Textbox.TabIndex = 2;
+            this.New_Recovery_Email_Textbox.Text = "Recovery Email";
+            this.New_Recovery_Email_Textbox.TextChanged += new System.EventHandler(this.New_Recovery_Email_Changed);
+            this.New_Recovery_Email_Textbox.Enter += new System.EventHandler(this.New_Recovery_Email_Enter);
+            this.New_Recovery_Email_Textbox.Leave += new System.EventHandler(this.New_Recovery_Email_Leave);
             // 
             // Move_Panel
             // 
@@ -196,6 +196,7 @@
             this.show_less_bt.Text = "Show less";
             this.show_less_bt.UseVisualStyleBackColor = true;
             this.show_less_bt.Visible = false;
+            this.show_less_bt.Click += new System.EventHandler(this.show_less_bt_Click_1);
             // 
             // Show_Button
             // 
@@ -408,10 +409,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox New_Phone_Textbox;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox New_Recovery_Email_Textbox;
         private System.Windows.Forms.Panel Move_Panel;
         private System.Windows.Forms.Button Save_Password_Button;
         private System.Windows.Forms.Panel panel7;

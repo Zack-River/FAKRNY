@@ -10,6 +10,7 @@ namespace Fakarny
     {
         string Program_path = "1", Key, temp;
         string[] Names_before_Clean, Names;
+        Data data;
         public FakarnyPage(string Program_path, string Key)
         {
             this.Program_path = Program_path;
@@ -17,6 +18,8 @@ namespace Fakarny
             InitializeComponent();
             edit_Account1.Program_Path = Program_path;
             edit_Account1.key = Key;
+            add_Account1.Program_Path = Program_path;
+            add_Account1.key = Key;
         }
         private void FakarnyPage_Load(object sender, EventArgs e)
         {
@@ -38,6 +41,8 @@ namespace Fakarny
 
         private void View_Contents_Button_Click(object sender, EventArgs e)
         {
+            add_Account1.Data_Set = data;
+            add_Account1.Enter_data();
             edit_Account1.Hide();
             add_Account1.Show();
             add_Account1.BringToFront();
@@ -52,6 +57,54 @@ namespace Fakarny
 
         private void edit_Account1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void Show_Name_Combobox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            string temp;
+            Encryptor enc = new Encryptor(Key);
+            if (Show_Name_Combobox.SelectedIndex >= Names_before_Clean.Length || Show_Name_Combobox.SelectedIndex < 0)
+            {
+                //exception
+            }
+            temp = Names_before_Clean[Show_Name_Combobox.SelectedIndex];
+            using (StreamReader sr = new StreamReader(temp))
+            {
+                data.IV = enc.IV = sr.ReadLine();
+                Name_Label.Text = data.Site_Name = Show_Name_Combobox.SelectedItem.ToString();
+                User_Id_Label.Text = data.User_Name = enc.Decrypt(sr.ReadLine());
+                data.Password = enc.Decrypt(sr.ReadLine());
+                data.Phone = enc.Decrypt(sr.ReadLine());
+                data.Recovery_Email = enc.Decrypt(sr.ReadLine());
+            }
+            add_Account1.Data_Set = data;
+            edit_Account1.Data_Set = data;
+        }
+
+        private void Copy_Username_Button_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetDataObject(data.User_Name);
+        }
+
+        private void Copy_Password_Button_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetDataObject(data.Password);
+        }
+
+        private void Show_Name_Combobox_DropDown(object sender, EventArgs e)
+        {
+            Names_before_Clean = Directory.GetFiles(Program_path, "*.txt");
+            Names = new string[Names_before_Clean.Length];
+            Encryptor enc = new Encryptor(Key);
+            for (int i = 0; i < Names_before_Clean.Length; i++)
+            {
+                temp = Names_before_Clean[i].Substring(Program_path.Length + 1);
+                temp = temp.Remove(temp.Length - 4);
+                Names[i] = enc.Path_Safe_Decrypt(temp);
+            }
+            Show_Name_Combobox.Items.Clear();
+            Show_Name_Combobox.Items.AddRange(Names);
 
         }
 
@@ -115,7 +168,7 @@ namespace Fakarny
             using (ICryptoTransform decryptor = aes.CreateDecryptor(KeyByte, iv))
             {
                 byte[] decryptedBytes = decryptor.TransformFinalBlock(encbytes, 0, encbytes.Length);
-                string decryptedText = Convert.ToBase64String(decryptedBytes);
+                string decryptedText = Encoding.UTF8.GetString(decryptedBytes);
                 return decryptedText;
             }
         }
@@ -178,7 +231,7 @@ namespace Fakarny
             s = sb.ToString();
         }
 
-        private void Make_UnSafe(ref string s)
+        private string Make_UnSafe(string s)
         {
             StringBuilder sb = new StringBuilder(s);
             for (int i = 0; i < sb.Length; i++)
@@ -187,20 +240,55 @@ namespace Fakarny
                     sb[i] = '/';
             }
             s = sb.ToString();
+            return s;
         }
 
         public string Path_Safe_Decrypt(string Encrypted)
         {
-            Make_UnSafe(ref Encrypted);
+            Encrypted = Make_UnSafe(Encrypted);
             byte[] encbytes = Convert.FromBase64String(Encrypted);
             using (ICryptoTransform decryptor = aes.CreateDecryptor(KeyByte, iv))
             {
                 byte[] decryptedBytes = decryptor.TransformFinalBlock(encbytes, 0, encbytes.Length);
-                string decryptedText = Convert.ToBase64String(decryptedBytes);
+                string decryptedText = Encoding.UTF8.GetString(decryptedBytes);
                 return decryptedText;
             }
         }
-
     }
     #endregion
+    public struct Data
+    {
+        private string Iv, Site_name, User_name, password, phone, Recovery_email;
+
+        public string IV
+        {
+            get { return Iv; }
+            set { Iv = value; }
+        }
+        public string Site_Name
+        {
+            get { return Site_name; }
+            set { Site_name = value; }
+        }
+        public string User_Name
+        {
+            get { return User_name; }
+            set { User_name = value; }
+        }
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
+        public string Phone
+        {
+            get { return phone; }
+            set { phone = value; }
+        }
+        public string Recovery_Email
+        {
+            get { return Recovery_email; }
+            set { Recovery_email = value; }
+        }
+    }
 }

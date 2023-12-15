@@ -72,11 +72,14 @@
             // 
             this.Show_Name_Combobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.Show_Name_Combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Show_Name_Combobox.ForeColor = System.Drawing.Color.White;
             this.Show_Name_Combobox.FormattingEnabled = true;
             this.Show_Name_Combobox.Location = new System.Drawing.Point(27, 210);
             this.Show_Name_Combobox.Name = "Show_Name_Combobox";
             this.Show_Name_Combobox.Size = new System.Drawing.Size(611, 45);
             this.Show_Name_Combobox.TabIndex = 19;
+            this.Show_Name_Combobox.DropDown += new System.EventHandler(this.Show_Name_Combobox_DropDown);
+            this.Show_Name_Combobox.SelectionChangeCommitted += new System.EventHandler(this.Show_Name_Combobox_SelectionChangeCommitted);
             // 
             // panel9
             // 
@@ -119,6 +122,7 @@
             this.Copy_Password_Button.TabIndex = 19;
             this.Copy_Password_Button.Text = "Copy Password";
             this.Copy_Password_Button.UseVisualStyleBackColor = false;
+            this.Copy_Password_Button.Click += new System.EventHandler(this.Copy_Password_Button_Click);
             // 
             // Copy_Username_Button
             // 
@@ -133,6 +137,7 @@
             this.Copy_Username_Button.TabIndex = 19;
             this.Copy_Username_Button.Text = "Copy Username";
             this.Copy_Username_Button.UseVisualStyleBackColor = false;
+            this.Copy_Username_Button.Click += new System.EventHandler(this.Copy_Username_Button_Click);
             // 
             // panel8
             // 

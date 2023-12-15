@@ -8,6 +8,7 @@ namespace Fakarny.UserControls
     public partial class Edit_Account : UserControl
     {
         string Program_path, site_name, Key;
+        Data data;
         bool name = false, id = false, pass = false, phone = false, email = false;
 
         public Edit_Account()
@@ -195,6 +196,7 @@ namespace Fakarny.UserControls
                 sr.WriteLine(enc.Encrypt(New_Phone_Textbox.Text));
                 sr.WriteLine(enc.Encrypt(New_Recovery_Email_Textbox.Text));
             }
+
         }
 
         public bool validation()
@@ -253,6 +255,17 @@ namespace Fakarny.UserControls
 
         }
 
+        public Data Data_Set
+        {
+            get
+            {
+                return data;
+            }
+            set
+            {
+                data = value;
+            }
+        }
 
     }
 
