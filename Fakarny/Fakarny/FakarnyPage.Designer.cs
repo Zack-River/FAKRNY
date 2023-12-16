@@ -54,7 +54,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel1.Controls.Add(this.Show_Name_Combobox);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.Add_Acc_Button);
             this.panel1.Controls.Add(this.panel3);
@@ -71,18 +70,20 @@
             // Show_Name_Combobox
             // 
             this.Show_Name_Combobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.Show_Name_Combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Show_Name_Combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Show_Name_Combobox.ForeColor = System.Drawing.Color.White;
             this.Show_Name_Combobox.FormattingEnabled = true;
-            this.Show_Name_Combobox.Location = new System.Drawing.Point(27, 210);
+            this.Show_Name_Combobox.Location = new System.Drawing.Point(3, 7);
             this.Show_Name_Combobox.Name = "Show_Name_Combobox";
-            this.Show_Name_Combobox.Size = new System.Drawing.Size(611, 45);
+            this.Show_Name_Combobox.Size = new System.Drawing.Size(267, 28);
             this.Show_Name_Combobox.TabIndex = 19;
+            this.Show_Name_Combobox.Text = "Choose Your Account From Here";
             this.Show_Name_Combobox.DropDown += new System.EventHandler(this.Show_Name_Combobox_DropDown);
             this.Show_Name_Combobox.SelectionChangeCommitted += new System.EventHandler(this.Show_Name_Combobox_SelectionChangeCommitted);
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.Show_Name_Combobox);
             this.panel9.Controls.Add(this.View_Contents_Button);
             this.panel9.Controls.Add(this.Copy_Password_Button);
             this.panel9.Controls.Add(this.Copy_Username_Button);
@@ -150,11 +151,11 @@
             // User_Id_Label
             // 
             this.User_Id_Label.AutoSize = true;
-            this.User_Id_Label.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.User_Id_Label.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10F);
             this.User_Id_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
             this.User_Id_Label.Location = new System.Drawing.Point(3, 38);
             this.User_Id_Label.Name = "User_Id_Label";
-            this.User_Id_Label.Size = new System.Drawing.Size(59, 14);
+            this.User_Id_Label.Size = new System.Drawing.Size(75, 18);
             this.User_Id_Label.TabIndex = 14;
             this.User_Id_Label.Text = "Username";
             // 
@@ -249,9 +250,11 @@
             // add_Account1
             // 
             this.add_Account1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.add_Account1.key = null;
             this.add_Account1.Location = new System.Drawing.Point(4, 5);
             this.add_Account1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.add_Account1.Name = "add_Account1";
+            this.add_Account1.Program_Path = null;
             this.add_Account1.Size = new System.Drawing.Size(503, 681);
             this.add_Account1.TabIndex = 0;
             this.add_Account1.Load += new System.EventHandler(this.add_Account1_Load);

@@ -40,7 +40,8 @@ namespace Fakarny.UserControls
         }
         private void Show_Button_Click(object sender, EventArgs e)
         {
-            Move_Panel.Location = new System.Drawing.Point(81, 610);
+            Move_Panel.Location = new System.Drawing.Point(81, 560);
+            panel17.Location = new System.Drawing.Point(37,413);
             panel17.Visible = true;
             show_less_bt.Visible = true;
             Show_Button.Visible = false;
@@ -50,6 +51,7 @@ namespace Fakarny.UserControls
         private void show_less_bt_Click(object sender, EventArgs e)
         {
             Move_Panel.Location = new System.Drawing.Point(81, 409);
+            panel17.Location = new System.Drawing.Point(37, 483);
             panel17.Visible = false;
             show_less_bt.Visible = false;
             Show_Button.Visible = true;
