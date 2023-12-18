@@ -215,7 +215,6 @@ namespace Fakarny.UserControls
             else
             {
                 invalid_phone.Hide();
-                New_Phone_Textbox.Text = "Phone Number";
                 New_Phone_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
             }
             if (save)
@@ -237,6 +236,9 @@ namespace Fakarny.UserControls
                     sr.WriteLine(enc.Encrypt(New_Phone_Textbox.Text));
                     sr.WriteLine(enc.Encrypt(New_Recovery_Email_Textbox.Text));
                 }
+                New_Phone_Textbox.Text = "Phone Number";
+                New_User_Id_Textbox.Text = "username or email id";
+                New_Phone_Textbox.Text = "Phone Number";
                 Account_Saved.Show();
             }
 

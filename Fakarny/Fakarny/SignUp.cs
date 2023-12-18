@@ -278,6 +278,7 @@ namespace Fakarny
                 {
                     sw.Write(ComputeHash(SignUp_Password_Textbox.Text));
                 }
+                Directory.CreateDirectory(File_ext+ "\\Info");
                 using (StreamWriter sw = File.CreateText(File_ext + @"\Info\Info.txt"))
                 {
                     sw.WriteLine(SignUp_Fullname_Textbox.Text);
