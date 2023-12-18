@@ -71,9 +71,10 @@
             // 
             this.Have_An_Account_Link.AutoSize = true;
             this.Have_An_Account_Link.LinkColor = System.Drawing.Color.White;
-            this.Have_An_Account_Link.Location = new System.Drawing.Point(155, 589);
+            this.Have_An_Account_Link.Location = new System.Drawing.Point(232, 906);
+            this.Have_An_Account_Link.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Have_An_Account_Link.Name = "Have_An_Account_Link";
-            this.Have_An_Account_Link.Size = new System.Drawing.Size(126, 13);
+            this.Have_An_Account_Link.Size = new System.Drawing.Size(183, 20);
             this.Have_An_Account_Link.TabIndex = 14;
             this.Have_An_Account_Link.TabStop = true;
             this.Have_An_Account_Link.Text = "Already have an account";
@@ -86,9 +87,10 @@
             this.SignUp_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
             this.SignUp_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignUp_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.SignUp_Button.Location = new System.Drawing.Point(122, 529);
+            this.SignUp_Button.Location = new System.Drawing.Point(183, 814);
+            this.SignUp_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SignUp_Button.Name = "SignUp_Button";
-            this.SignUp_Button.Size = new System.Drawing.Size(193, 42);
+            this.SignUp_Button.Size = new System.Drawing.Size(290, 65);
             this.SignUp_Button.TabIndex = 13;
             this.SignUp_Button.Text = "Sign Up";
             this.SignUp_Button.UseVisualStyleBackColor = true;
@@ -101,9 +103,10 @@
             this.SignUp_Confirm_Password_Label.AutoSize = true;
             this.SignUp_Confirm_Password_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUp_Confirm_Password_Label.ForeColor = System.Drawing.Color.White;
-            this.SignUp_Confirm_Password_Label.Location = new System.Drawing.Point(79, 414);
+            this.SignUp_Confirm_Password_Label.Location = new System.Drawing.Point(118, 637);
+            this.SignUp_Confirm_Password_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SignUp_Confirm_Password_Label.Name = "SignUp_Confirm_Password_Label";
-            this.SignUp_Confirm_Password_Label.Size = new System.Drawing.Size(115, 16);
+            this.SignUp_Confirm_Password_Label.Size = new System.Drawing.Size(171, 25);
             this.SignUp_Confirm_Password_Label.TabIndex = 11;
             this.SignUp_Confirm_Password_Label.Text = "Confirm Password";
             // 
@@ -111,17 +114,19 @@
             // 
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.SignUp_Password_Textbox);
-            this.panel7.Location = new System.Drawing.Point(155, 330);
+            this.panel7.Location = new System.Drawing.Point(232, 508);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(236, 41);
+            this.panel7.Size = new System.Drawing.Size(354, 63);
             this.panel7.TabIndex = 3;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.panel8.Location = new System.Drawing.Point(3, 23);
+            this.panel8.Location = new System.Drawing.Point(4, 35);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(233, 1);
+            this.panel8.Size = new System.Drawing.Size(350, 2);
             this.panel8.TabIndex = 4;
             // 
             // SignUp_Password_Textbox
@@ -129,10 +134,11 @@
             this.SignUp_Password_Textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.SignUp_Password_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SignUp_Password_Textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.SignUp_Password_Textbox.Location = new System.Drawing.Point(3, 3);
+            this.SignUp_Password_Textbox.Location = new System.Drawing.Point(4, 5);
+            this.SignUp_Password_Textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SignUp_Password_Textbox.Multiline = true;
             this.SignUp_Password_Textbox.Name = "SignUp_Password_Textbox";
-            this.SignUp_Password_Textbox.Size = new System.Drawing.Size(233, 18);
+            this.SignUp_Password_Textbox.Size = new System.Drawing.Size(350, 28);
             this.SignUp_Password_Textbox.TabIndex = 2;
             this.SignUp_Password_Textbox.Text = "Password";
             this.SignUp_Password_Textbox.TextChanged += new System.EventHandler(this.Password_Changed);
@@ -142,9 +148,10 @@
             // Invalid_Password
             // 
             this.Invalid_Password.ForeColor = System.Drawing.Color.Red;
-            this.Invalid_Password.Location = new System.Drawing.Point(156, 374);
+            this.Invalid_Password.Location = new System.Drawing.Point(234, 575);
+            this.Invalid_Password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Invalid_Password.Name = "Invalid_Password";
-            this.Invalid_Password.Size = new System.Drawing.Size(238, 40);
+            this.Invalid_Password.Size = new System.Drawing.Size(357, 62);
             this.Invalid_Password.TabIndex = 0;
             this.Invalid_Password.Text = "Invalid Password";
             // 
@@ -152,17 +159,19 @@
             // 
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.SignUp_Username_Textbox);
-            this.panel4.Location = new System.Drawing.Point(155, 244);
+            this.panel4.Location = new System.Drawing.Point(232, 375);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(236, 41);
+            this.panel4.Size = new System.Drawing.Size(354, 63);
             this.panel4.TabIndex = 3;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.panel5.Location = new System.Drawing.Point(3, 23);
+            this.panel5.Location = new System.Drawing.Point(4, 35);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(233, 1);
+            this.panel5.Size = new System.Drawing.Size(350, 2);
             this.panel5.TabIndex = 4;
             // 
             // SignUp_Username_Textbox
@@ -170,10 +179,11 @@
             this.SignUp_Username_Textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.SignUp_Username_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SignUp_Username_Textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.SignUp_Username_Textbox.Location = new System.Drawing.Point(3, 3);
+            this.SignUp_Username_Textbox.Location = new System.Drawing.Point(4, 5);
+            this.SignUp_Username_Textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SignUp_Username_Textbox.Multiline = true;
             this.SignUp_Username_Textbox.Name = "SignUp_Username_Textbox";
-            this.SignUp_Username_Textbox.Size = new System.Drawing.Size(233, 18);
+            this.SignUp_Username_Textbox.Size = new System.Drawing.Size(350, 28);
             this.SignUp_Username_Textbox.TabIndex = 2;
             this.SignUp_Username_Textbox.Text = "Username";
             this.SignUp_Username_Textbox.TextChanged += new System.EventHandler(this.Username_Changed);
@@ -183,9 +193,10 @@
             // Invalid_Username_Label
             // 
             this.Invalid_Username_Label.ForeColor = System.Drawing.Color.Red;
-            this.Invalid_Username_Label.Location = new System.Drawing.Point(156, 288);
+            this.Invalid_Username_Label.Location = new System.Drawing.Point(234, 443);
+            this.Invalid_Username_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Invalid_Username_Label.Name = "Invalid_Username_Label";
-            this.Invalid_Username_Label.Size = new System.Drawing.Size(238, 37);
+            this.Invalid_Username_Label.Size = new System.Drawing.Size(357, 57);
             this.Invalid_Username_Label.TabIndex = 0;
             this.Invalid_Username_Label.Text = "Invalid Username";
             // 
@@ -193,9 +204,10 @@
             // 
             this.panel3.BackgroundImage = global::Fakarny.Properties.Resources.Profile_Icon;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(39, 239);
+            this.panel3.Location = new System.Drawing.Point(58, 368);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(34, 34);
+            this.panel3.Size = new System.Drawing.Size(51, 52);
             this.panel3.TabIndex = 12;
             // 
             // SignUp_Fullname_Label
@@ -203,18 +215,20 @@
             this.SignUp_Fullname_Label.AutoSize = true;
             this.SignUp_Fullname_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUp_Fullname_Label.ForeColor = System.Drawing.Color.White;
-            this.SignUp_Fullname_Label.Location = new System.Drawing.Point(79, 169);
+            this.SignUp_Fullname_Label.Location = new System.Drawing.Point(118, 260);
+            this.SignUp_Fullname_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SignUp_Fullname_Label.Name = "SignUp_Fullname_Label";
-            this.SignUp_Fullname_Label.Size = new System.Drawing.Size(68, 16);
+            this.SignUp_Fullname_Label.Size = new System.Drawing.Size(100, 25);
             this.SignUp_Fullname_Label.TabIndex = 11;
             this.SignUp_Fullname_Label.Text = "Full Name";
             // 
             // Username_UnderLine_Panel
             // 
             this.Username_UnderLine_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.Username_UnderLine_Panel.Location = new System.Drawing.Point(3, 23);
+            this.Username_UnderLine_Panel.Location = new System.Drawing.Point(4, 35);
+            this.Username_UnderLine_Panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Username_UnderLine_Panel.Name = "Username_UnderLine_Panel";
-            this.Username_UnderLine_Panel.Size = new System.Drawing.Size(233, 1);
+            this.Username_UnderLine_Panel.Size = new System.Drawing.Size(350, 2);
             this.Username_UnderLine_Panel.TabIndex = 4;
             // 
             // SignUp_Fullname_Textbox
@@ -222,10 +236,11 @@
             this.SignUp_Fullname_Textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.SignUp_Fullname_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SignUp_Fullname_Textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.SignUp_Fullname_Textbox.Location = new System.Drawing.Point(3, 3);
+            this.SignUp_Fullname_Textbox.Location = new System.Drawing.Point(4, 5);
+            this.SignUp_Fullname_Textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SignUp_Fullname_Textbox.Multiline = true;
             this.SignUp_Fullname_Textbox.Name = "SignUp_Fullname_Textbox";
-            this.SignUp_Fullname_Textbox.Size = new System.Drawing.Size(233, 18);
+            this.SignUp_Fullname_Textbox.Size = new System.Drawing.Size(350, 28);
             this.SignUp_Fullname_Textbox.TabIndex = 2;
             this.SignUp_Fullname_Textbox.Text = "Full name";
             this.SignUp_Fullname_Textbox.TextChanged += new System.EventHandler(this.Fullname_Changed);
@@ -237,9 +252,10 @@
             this.SignUp_Password_Label.AutoSize = true;
             this.SignUp_Password_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUp_Password_Label.ForeColor = System.Drawing.Color.White;
-            this.SignUp_Password_Label.Location = new System.Drawing.Point(79, 334);
+            this.SignUp_Password_Label.Location = new System.Drawing.Point(118, 514);
+            this.SignUp_Password_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SignUp_Password_Label.Name = "SignUp_Password_Label";
-            this.SignUp_Password_Label.Size = new System.Drawing.Size(67, 16);
+            this.SignUp_Password_Label.Size = new System.Drawing.Size(98, 25);
             this.SignUp_Password_Label.TabIndex = 11;
             this.SignUp_Password_Label.Text = "Password";
             // 
@@ -247,9 +263,10 @@
             // 
             this.panel9.BackgroundImage = global::Fakarny.Properties.Resources.Lock_Icon;
             this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel9.Location = new System.Drawing.Point(39, 405);
+            this.panel9.Location = new System.Drawing.Point(58, 623);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(34, 34);
+            this.panel9.Size = new System.Drawing.Size(51, 52);
             this.panel9.TabIndex = 12;
             // 
             // SignUp_Username_Label
@@ -257,9 +274,10 @@
             this.SignUp_Username_Label.AutoSize = true;
             this.SignUp_Username_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUp_Username_Label.ForeColor = System.Drawing.Color.White;
-            this.SignUp_Username_Label.Location = new System.Drawing.Point(79, 248);
+            this.SignUp_Username_Label.Location = new System.Drawing.Point(118, 382);
+            this.SignUp_Username_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SignUp_Username_Label.Name = "SignUp_Username_Label";
-            this.SignUp_Username_Label.Size = new System.Drawing.Size(70, 16);
+            this.SignUp_Username_Label.Size = new System.Drawing.Size(102, 25);
             this.SignUp_Username_Label.TabIndex = 11;
             this.SignUp_Username_Label.Text = "Username";
             // 
@@ -267,26 +285,29 @@
             // 
             this.panel6.BackgroundImage = global::Fakarny.Properties.Resources.Lock_Icon;
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Location = new System.Drawing.Point(39, 325);
+            this.panel6.Location = new System.Drawing.Point(58, 500);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(34, 34);
+            this.panel6.Size = new System.Drawing.Size(51, 52);
             this.panel6.TabIndex = 12;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.Username_UnderLine_Panel);
             this.panel2.Controls.Add(this.SignUp_Fullname_Textbox);
-            this.panel2.Location = new System.Drawing.Point(155, 165);
+            this.panel2.Location = new System.Drawing.Point(232, 254);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(236, 41);
+            this.panel2.Size = new System.Drawing.Size(354, 63);
             this.panel2.TabIndex = 3;
             // 
             // Invalid_Fullname
             // 
             this.Invalid_Fullname.ForeColor = System.Drawing.Color.Red;
-            this.Invalid_Fullname.Location = new System.Drawing.Point(155, 209);
+            this.Invalid_Fullname.Location = new System.Drawing.Point(232, 322);
+            this.Invalid_Fullname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Invalid_Fullname.Name = "Invalid_Fullname";
-            this.Invalid_Fullname.Size = new System.Drawing.Size(236, 23);
+            this.Invalid_Fullname.Size = new System.Drawing.Size(354, 35);
             this.Invalid_Fullname.TabIndex = 0;
             this.Invalid_Fullname.Text = "Invalid Fullname";
             // 
@@ -294,18 +315,20 @@
             // 
             this.Login_Username_Icon_Panel.BackgroundImage = global::Fakarny.Properties.Resources.Profile_Icon;
             this.Login_Username_Icon_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Login_Username_Icon_Panel.Location = new System.Drawing.Point(39, 160);
+            this.Login_Username_Icon_Panel.Location = new System.Drawing.Point(58, 246);
+            this.Login_Username_Icon_Panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Login_Username_Icon_Panel.Name = "Login_Username_Icon_Panel";
-            this.Login_Username_Icon_Panel.Size = new System.Drawing.Size(34, 34);
+            this.Login_Username_Icon_Panel.Size = new System.Drawing.Size(51, 52);
             this.Login_Username_Icon_Panel.TabIndex = 12;
             // 
             // SignUp_Fakrny_Logo_Panel
             // 
             this.SignUp_Fakrny_Logo_Panel.BackgroundImage = global::Fakarny.Properties.Resources.signup;
             this.SignUp_Fakrny_Logo_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SignUp_Fakrny_Logo_Panel.Location = new System.Drawing.Point(158, 18);
+            this.SignUp_Fakrny_Logo_Panel.Location = new System.Drawing.Point(237, 28);
+            this.SignUp_Fakrny_Logo_Panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SignUp_Fakrny_Logo_Panel.Name = "SignUp_Fakrny_Logo_Panel";
-            this.SignUp_Fakrny_Logo_Panel.Size = new System.Drawing.Size(120, 120);
+            this.SignUp_Fakrny_Logo_Panel.Size = new System.Drawing.Size(180, 185);
             this.SignUp_Fakrny_Logo_Panel.TabIndex = 10;
             // 
             // panel1
@@ -334,18 +357,20 @@
             this.panel1.Controls.Add(this.SignUp_Fullname_Label);
             this.panel1.Controls.Add(this.Login_Username_Icon_Panel);
             this.panel1.Controls.Add(this.SignUp_Fakrny_Logo_Panel);
-            this.panel1.Location = new System.Drawing.Point(416, 21);
+            this.panel1.Location = new System.Drawing.Point(624, 32);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(432, 638);
+            this.panel1.Size = new System.Drawing.Size(648, 982);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Password_Matching
             // 
             this.Password_Matching.ForeColor = System.Drawing.Color.Red;
-            this.Password_Matching.Location = new System.Drawing.Point(158, 482);
+            this.Password_Matching.Location = new System.Drawing.Point(237, 742);
+            this.Password_Matching.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Password_Matching.Name = "Password_Matching";
-            this.Password_Matching.Size = new System.Drawing.Size(236, 23);
+            this.Password_Matching.Size = new System.Drawing.Size(354, 35);
             this.Password_Matching.TabIndex = 0;
             this.Password_Matching.Text = "Password must match";
             // 
@@ -354,9 +379,10 @@
             this.Star4.BackColor = System.Drawing.Color.Transparent;
             this.Star4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.Star4.ForeColor = System.Drawing.Color.Red;
-            this.Star4.Location = new System.Drawing.Point(397, 446);
+            this.Star4.Location = new System.Drawing.Point(596, 686);
+            this.Star4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Star4.Name = "Star4";
-            this.Star4.Size = new System.Drawing.Size(15, 15);
+            this.Star4.Size = new System.Drawing.Size(22, 23);
             this.Star4.TabIndex = 18;
             this.Star4.Text = "*";
             // 
@@ -365,9 +391,10 @@
             this.Star3.BackColor = System.Drawing.Color.Transparent;
             this.Star3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.Star3.ForeColor = System.Drawing.Color.Red;
-            this.Star3.Location = new System.Drawing.Point(397, 325);
+            this.Star3.Location = new System.Drawing.Point(596, 500);
+            this.Star3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Star3.Name = "Star3";
-            this.Star3.Size = new System.Drawing.Size(15, 15);
+            this.Star3.Size = new System.Drawing.Size(22, 23);
             this.Star3.TabIndex = 17;
             this.Star3.Text = "*";
             // 
@@ -376,9 +403,10 @@
             this.Star2.BackColor = System.Drawing.Color.Transparent;
             this.Star2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.Star2.ForeColor = System.Drawing.Color.Red;
-            this.Star2.Location = new System.Drawing.Point(397, 253);
+            this.Star2.Location = new System.Drawing.Point(596, 389);
+            this.Star2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Star2.Name = "Star2";
-            this.Star2.Size = new System.Drawing.Size(15, 15);
+            this.Star2.Size = new System.Drawing.Size(22, 23);
             this.Star2.TabIndex = 16;
             this.Star2.Text = "*";
             // 
@@ -387,9 +415,10 @@
             this.Star1.BackColor = System.Drawing.Color.Transparent;
             this.Star1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.Star1.ForeColor = System.Drawing.Color.Red;
-            this.Star1.Location = new System.Drawing.Point(397, 179);
+            this.Star1.Location = new System.Drawing.Point(596, 275);
+            this.Star1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Star1.Name = "Star1";
-            this.Star1.Size = new System.Drawing.Size(15, 15);
+            this.Star1.Size = new System.Drawing.Size(22, 23);
             this.Star1.TabIndex = 15;
             this.Star1.Text = "*";
             // 
@@ -397,17 +426,19 @@
             // 
             this.panel10.Controls.Add(this.panel11);
             this.panel10.Controls.Add(this.SignUp_Confirm_Password_Textbox);
-            this.panel10.Location = new System.Drawing.Point(158, 438);
+            this.panel10.Location = new System.Drawing.Point(237, 674);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(236, 41);
+            this.panel10.Size = new System.Drawing.Size(354, 63);
             this.panel10.TabIndex = 3;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.panel11.Location = new System.Drawing.Point(3, 23);
+            this.panel11.Location = new System.Drawing.Point(4, 35);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(233, 1);
+            this.panel11.Size = new System.Drawing.Size(350, 2);
             this.panel11.TabIndex = 4;
             // 
             // SignUp_Confirm_Password_Textbox
@@ -415,10 +446,11 @@
             this.SignUp_Confirm_Password_Textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.SignUp_Confirm_Password_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SignUp_Confirm_Password_Textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.SignUp_Confirm_Password_Textbox.Location = new System.Drawing.Point(3, 3);
+            this.SignUp_Confirm_Password_Textbox.Location = new System.Drawing.Point(4, 5);
+            this.SignUp_Confirm_Password_Textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SignUp_Confirm_Password_Textbox.Multiline = true;
             this.SignUp_Confirm_Password_Textbox.Name = "SignUp_Confirm_Password_Textbox";
-            this.SignUp_Confirm_Password_Textbox.Size = new System.Drawing.Size(233, 18);
+            this.SignUp_Confirm_Password_Textbox.Size = new System.Drawing.Size(350, 28);
             this.SignUp_Confirm_Password_Textbox.TabIndex = 2;
             this.SignUp_Confirm_Password_Textbox.Text = "Confirm Password";
             this.SignUp_Confirm_Password_Textbox.TextChanged += new System.EventHandler(this.Confirm_Changed);
@@ -427,14 +459,17 @@
             // 
             // SignUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Fakarny.Properties.Resources.Picsart_23_11_27_23_53_32_550;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1896, 1048);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SignUp";
             this.Text = "Fakrny - فكرني";
             this.Load += new System.EventHandler(this.SignUp_Load);

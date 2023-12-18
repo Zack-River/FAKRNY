@@ -90,6 +90,19 @@ namespace Fakarny
             Clipboard.SetDataObject(data.User_Name);
         }
 
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            if (File.Exists(Program_path + Search_Textbox.Text + ".txt"))
+            {
+                Name_Label.Text = Search_Textbox.Text;
+                StreamReader r = new StreamReader(Program_path + Search_Textbox.Text + ".txt");
+                string data = r.ReadLine();
+                User_Id_Label.Text = data;
+                r.Close();
+
+            }
+        }
+
         private void Copy_Password_Button_Click(object sender, EventArgs e)
         {
             Clipboard.SetDataObject(data.Password);
