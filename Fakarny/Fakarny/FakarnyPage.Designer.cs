@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Show_Name_Combobox = new System.Windows.Forms.ComboBox();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.Show_Name_Combobox = new System.Windows.Forms.ComboBox();
             this.View_Contents_Button = new System.Windows.Forms.Button();
             this.Copy_Password_Button = new System.Windows.Forms.Button();
             this.Copy_Username_Button = new System.Windows.Forms.Button();
@@ -54,6 +54,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel1.Controls.Add(this.Show_Name_Combobox);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.Add_Acc_Button);
             this.panel1.Controls.Add(this.panel3);
@@ -67,23 +68,8 @@
             this.panel1.Size = new System.Drawing.Size(755, 681);
             this.panel1.TabIndex = 3;
             // 
-            // Show_Name_Combobox
-            // 
-            this.Show_Name_Combobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.Show_Name_Combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Show_Name_Combobox.ForeColor = System.Drawing.Color.White;
-            this.Show_Name_Combobox.FormattingEnabled = true;
-            this.Show_Name_Combobox.Location = new System.Drawing.Point(3, 7);
-            this.Show_Name_Combobox.Name = "Show_Name_Combobox";
-            this.Show_Name_Combobox.Size = new System.Drawing.Size(267, 28);
-            this.Show_Name_Combobox.TabIndex = 19;
-            this.Show_Name_Combobox.Text = "Choose Your Account From Here";
-            this.Show_Name_Combobox.DropDown += new System.EventHandler(this.Show_Name_Combobox_DropDown);
-            this.Show_Name_Combobox.SelectionChangeCommitted += new System.EventHandler(this.Show_Name_Combobox_SelectionChangeCommitted);
-            // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.Show_Name_Combobox);
             this.panel9.Controls.Add(this.View_Contents_Button);
             this.panel9.Controls.Add(this.Copy_Password_Button);
             this.panel9.Controls.Add(this.Copy_Username_Button);
@@ -94,6 +80,20 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(701, 69);
             this.panel9.TabIndex = 18;
+            // 
+            // Show_Name_Combobox
+            // 
+            this.Show_Name_Combobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.Show_Name_Combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.Show_Name_Combobox.ForeColor = System.Drawing.Color.White;
+            this.Show_Name_Combobox.FormattingEnabled = true;
+            this.Show_Name_Combobox.Location = new System.Drawing.Point(27, 207);
+            this.Show_Name_Combobox.Name = "Show_Name_Combobox";
+            this.Show_Name_Combobox.Size = new System.Drawing.Size(445, 32);
+            this.Show_Name_Combobox.TabIndex = 19;
+            this.Show_Name_Combobox.Text = "Choose Your Account From Here";
+            this.Show_Name_Combobox.DropDown += new System.EventHandler(this.Show_Name_Combobox_DropDown);
+            this.Show_Name_Combobox.SelectionChangeCommitted += new System.EventHandler(this.Show_Name_Combobox_SelectionChangeCommitted);
             // 
             // View_Contents_Button
             // 
@@ -169,7 +169,6 @@
             this.Name_Label.Size = new System.Drawing.Size(84, 20);
             this.Name_Label.TabIndex = 14;
             this.Name_Label.Text = "App Name";
-            this.Name_Label.Click += new System.EventHandler(this.Name_Label_Click);
             // 
             // Add_Acc_Button
             // 

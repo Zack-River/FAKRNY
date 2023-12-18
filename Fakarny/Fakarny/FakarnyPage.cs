@@ -41,11 +41,14 @@ namespace Fakarny
 
         private void View_Contents_Button_Click(object sender, EventArgs e)
         {
-            add_Account1.Data_Set = data;
-            add_Account1.Enter_data();
-            edit_Account1.Hide();
-            add_Account1.Show();
-            add_Account1.BringToFront();
+            if (Show_Name_Combobox.SelectedIndex >= 0)
+            {
+                add_Account1.Data_Set = data;
+                add_Account1.Enter_data();
+                edit_Account1.Hide();
+                add_Account1.Show();
+                add_Account1.BringToFront();
+            }
         }
 
         private void Add_Acc_Button_Click_1(object sender, EventArgs e)
@@ -109,16 +112,6 @@ namespace Fakarny
         }
 
         private void add_Account1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Name_Label_Click(object sender, EventArgs e)
         {
 
         }

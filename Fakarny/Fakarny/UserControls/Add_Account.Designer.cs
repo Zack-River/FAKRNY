@@ -55,6 +55,16 @@
             this.New_Name_Textbox = new System.Windows.Forms.TextBox();
             this.SignUp_Fullname_Label = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.invalid_name = new System.Windows.Forms.Label();
+            this.invalid_id = new System.Windows.Forms.Label();
+            this.invalid_pass = new System.Windows.Forms.Label();
+            this.invalid_phone = new System.Windows.Forms.Label();
+            this.invalid_mail = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Account_Updated = new System.Windows.Forms.Label();
             this.panel17.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -82,7 +92,7 @@
             this.panel17.Controls.Add(this.panel13);
             this.panel17.Location = new System.Drawing.Point(37, 483);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(318, 100);
+            this.panel17.Size = new System.Drawing.Size(318, 119);
             this.panel17.TabIndex = 37;
             this.panel17.Visible = false;
             // 
@@ -110,11 +120,12 @@
             // 
             // panel15
             // 
+            this.panel15.Controls.Add(this.label5);
             this.panel15.Controls.Add(this.panel16);
             this.panel15.Controls.Add(this.New_Phone_Textbox);
             this.panel15.Location = new System.Drawing.Point(82, 5);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(236, 37);
+            this.panel15.Size = new System.Drawing.Size(236, 48);
             this.panel15.TabIndex = 21;
             // 
             // panel16
@@ -143,11 +154,16 @@
             // 
             // panel13
             // 
+            this.panel13.Controls.Add(this.invalid_name);
             this.panel13.Controls.Add(this.panel14);
+            this.panel13.Controls.Add(this.invalid_id);
             this.panel13.Controls.Add(this.New_Recovery_Email_Textbox);
+            this.panel13.Controls.Add(this.invalid_pass);
+            this.panel13.Controls.Add(this.invalid_phone);
+            this.panel13.Controls.Add(this.invalid_mail);
             this.panel13.Location = new System.Drawing.Point(79, 56);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(236, 37);
+            this.panel13.Size = new System.Drawing.Size(236, 60);
             this.panel13.TabIndex = 23;
             // 
             // panel14
@@ -164,7 +180,7 @@
             this.New_Recovery_Email_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.New_Recovery_Email_Textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.New_Recovery_Email_Textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.New_Recovery_Email_Textbox.Location = new System.Drawing.Point(3, 3);
+            this.New_Recovery_Email_Textbox.Location = new System.Drawing.Point(3, 4);
             this.New_Recovery_Email_Textbox.Multiline = true;
             this.New_Recovery_Email_Textbox.Name = "New_Recovery_Email_Textbox";
             this.New_Recovery_Email_Textbox.Size = new System.Drawing.Size(233, 18);
@@ -270,11 +286,12 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.New_User_Id_Textbox);
             this.panel4.Location = new System.Drawing.Point(109, 234);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(236, 37);
+            this.panel4.Size = new System.Drawing.Size(236, 55);
             this.panel4.TabIndex = 31;
             // 
             // panel5
@@ -308,17 +325,18 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(33, 238);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.Size = new System.Drawing.Size(43, 20);
             this.label2.TabIndex = 32;
-            this.label2.Text = "User id";
+            this.label2.Text = "User";
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.Username_UnderLine_Panel);
             this.panel3.Controls.Add(this.New_Name_Textbox);
             this.panel3.Location = new System.Drawing.Point(109, 177);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(236, 37);
+            this.panel3.Size = new System.Drawing.Size(236, 51);
             this.panel3.TabIndex = 29;
             // 
             // Username_UnderLine_Panel
@@ -365,11 +383,125 @@
             this.panel1.Size = new System.Drawing.Size(50, 50);
             this.panel1.TabIndex = 39;
             // 
+            // invalid_name
+            // 
+            this.invalid_name.AutoSize = true;
+            this.invalid_name.ForeColor = System.Drawing.Color.Red;
+            this.invalid_name.Location = new System.Drawing.Point(-306, -281);
+            this.invalid_name.Name = "invalid_name";
+            this.invalid_name.Size = new System.Drawing.Size(72, 13);
+            this.invalid_name.TabIndex = 57;
+            this.invalid_name.Text = "Invalid Name!";
+            this.invalid_name.Visible = false;
+            // 
+            // invalid_id
+            // 
+            this.invalid_id.AutoSize = true;
+            this.invalid_id.ForeColor = System.Drawing.Color.Red;
+            this.invalid_id.Location = new System.Drawing.Point(-306, -281);
+            this.invalid_id.Name = "invalid_id";
+            this.invalid_id.Size = new System.Drawing.Size(97, 13);
+            this.invalid_id.TabIndex = 58;
+            this.invalid_id.Text = "Invalid User Name!";
+            this.invalid_id.Visible = false;
+            // 
+            // invalid_pass
+            // 
+            this.invalid_pass.AutoSize = true;
+            this.invalid_pass.ForeColor = System.Drawing.Color.Red;
+            this.invalid_pass.Location = new System.Drawing.Point(6, 36);
+            this.invalid_pass.Name = "invalid_pass";
+            this.invalid_pass.Size = new System.Drawing.Size(90, 13);
+            this.invalid_pass.TabIndex = 59;
+            this.invalid_pass.Text = "Invalid Password!";
+            this.invalid_pass.Visible = false;
+            this.invalid_pass.Click += new System.EventHandler(this.invalid_pass_Click);
+            // 
+            // invalid_phone
+            // 
+            this.invalid_phone.AutoSize = true;
+            this.invalid_phone.ForeColor = System.Drawing.Color.Red;
+            this.invalid_phone.Location = new System.Drawing.Point(-307, -281);
+            this.invalid_phone.Name = "invalid_phone";
+            this.invalid_phone.Size = new System.Drawing.Size(75, 13);
+            this.invalid_phone.TabIndex = 60;
+            this.invalid_phone.Text = "Invalid Phone!";
+            this.invalid_phone.Visible = false;
+            // 
+            // invalid_mail
+            // 
+            this.invalid_mail.AutoSize = true;
+            this.invalid_mail.ForeColor = System.Drawing.Color.Red;
+            this.invalid_mail.Location = new System.Drawing.Point(-307, -281);
+            this.invalid_mail.Name = "invalid_mail";
+            this.invalid_mail.Size = new System.Drawing.Size(69, 13);
+            this.invalid_mail.TabIndex = 61;
+            this.invalid_mail.Text = "Invalid Email!";
+            this.invalid_mail.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(3, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 13);
+            this.label5.TabIndex = 56;
+            this.label5.Text = "Invalid Phone!";
+            this.label5.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(311, 331);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 13);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "Invalid Password!";
+            this.label6.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(3, 31);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 13);
+            this.label7.TabIndex = 53;
+            this.label7.Text = "Invalid Name!";
+            this.label7.Visible = false;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(3, 37);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(97, 13);
+            this.label8.TabIndex = 54;
+            this.label8.Text = "Invalid User Name!";
+            this.label8.Visible = false;
+            // 
+            // Account_Updated
+            // 
+            this.Account_Updated.AutoSize = true;
+            this.Account_Updated.ForeColor = System.Drawing.Color.Lime;
+            this.Account_Updated.Location = new System.Drawing.Point(189, 642);
+            this.Account_Updated.Name = "Account_Updated";
+            this.Account_Updated.Size = new System.Drawing.Size(91, 13);
+            this.Account_Updated.TabIndex = 58;
+            this.Account_Updated.Text = "Account Updated";
+            this.Account_Updated.Visible = false;
+            // 
             // Add_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.Controls.Add(this.Account_Updated);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel17);
             this.Controls.Add(this.Move_Panel);
@@ -430,5 +562,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button show_less_bt;
         private System.Windows.Forms.Button Show_Button;
+        private System.Windows.Forms.Label invalid_name;
+        private System.Windows.Forms.Label invalid_id;
+        private System.Windows.Forms.Label invalid_pass;
+        private System.Windows.Forms.Label invalid_phone;
+        private System.Windows.Forms.Label invalid_mail;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label Account_Updated;
     }
 }

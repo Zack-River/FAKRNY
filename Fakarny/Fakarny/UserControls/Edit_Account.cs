@@ -181,22 +181,63 @@ namespace Fakarny.UserControls
 
         private void Save_Password_Button_Click(object sender, EventArgs e)
         {
-            Encryptor enc = new Encryptor(Key);
-            string en = enc.Path_Safe_Encrypt(New_Name_Textbox.Text);
-            enc.IVGenerate();
-            //string hashen = SignUp.ComputeHash(en);
-            //using (StreamWriter sr = File.AppendText(Program_path + "\\Index.txt"))
-            //{
-            //    sr.WriteLine(en);
-            //    sr.WriteLine(hashen);
-            //}
-            using (StreamWriter sr = File.CreateText(Program_path + "\\" + en + ".txt"))
+            Account_Saved.Hide();
+            bool save = true;
+            if(New_Name_Textbox.Text == ""|| New_Name_Textbox.Text == "website or app name")
             {
-                sr.WriteLine(enc.IV);
-                sr.WriteLine(enc.Encrypt(New_User_Id_Textbox.Text));
-                sr.WriteLine(enc.Encrypt(New_Password_Textbox.Text));
-                sr.WriteLine(enc.Encrypt(New_Phone_Textbox.Text));
-                sr.WriteLine(enc.Encrypt(New_Recovery_Email_Textbox.Text));
+                invalid_name.Show();
+                save = false;
+            }
+            else
+                invalid_id.Hide();
+
+            if (New_User_Id_Textbox.Text == "" || New_User_Id_Textbox.Text == "username or email id")
+            {
+                invalid_id.Show();
+                save = false;
+            }
+            else
+                invalid_name.Hide();
+
+            if (New_Password_Textbox.Text == "")
+            {
+                invalid_pass.Show();
+                save = false;
+            }
+            else
+                invalid_pass.Hide();
+
+            if ((New_Phone_Textbox.Text.Length > 15 || New_Phone_Textbox.Text.Length < 10 && New_Phone_Textbox.Text.Length != 0) && New_Phone_Textbox.Visible == true)
+            {
+                invalid_phone.Show();
+                save = false;
+            }
+            else
+            {
+                invalid_phone.Hide();
+                New_Phone_Textbox.Text = "Phone Number";
+                New_Phone_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
+            }
+            if (save)
+            {
+                Encryptor enc = new Encryptor(Key);
+                string en = enc.Path_Safe_Encrypt(New_Name_Textbox.Text);
+                enc.IVGenerate();
+                //string hashen = SignUp.ComputeHash(en);
+                //using (StreamWriter sr = File.AppendText(Program_path + "\\Index.txt"))
+                //{
+                //    sr.WriteLine(en);
+                //    sr.WriteLine(hashen);
+                //}
+                using (StreamWriter sr = File.CreateText(Program_path + "\\" + en + ".txt"))
+                {
+                    sr.WriteLine(enc.IV);
+                    sr.WriteLine(enc.Encrypt(New_User_Id_Textbox.Text));
+                    sr.WriteLine(enc.Encrypt(New_Password_Textbox.Text));
+                    sr.WriteLine(enc.Encrypt(New_Phone_Textbox.Text));
+                    sr.WriteLine(enc.Encrypt(New_Recovery_Email_Textbox.Text));
+                }
+                Account_Saved.Show();
             }
 
         }

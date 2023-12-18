@@ -60,6 +60,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.invalid_pass = new System.Windows.Forms.Label();
+            this.Account_Saved = new System.Windows.Forms.Label();
             this.panel17.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -326,9 +327,9 @@
             this.invalid_id.ForeColor = System.Drawing.Color.Red;
             this.invalid_id.Location = new System.Drawing.Point(4, 27);
             this.invalid_id.Name = "invalid_id";
-            this.invalid_id.Size = new System.Drawing.Size(55, 13);
+            this.invalid_id.Size = new System.Drawing.Size(97, 13);
             this.invalid_id.TabIndex = 53;
-            this.invalid_id.Text = "Invalid ID!";
+            this.invalid_id.Text = "Invalid User Name!";
             this.invalid_id.Visible = false;
             // 
             // label2
@@ -338,9 +339,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(33, 238);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.Size = new System.Drawing.Size(43, 20);
             this.label2.TabIndex = 43;
-            this.label2.Text = "User id";
+            this.label2.Text = "User";
             // 
             // panel3
             // 
@@ -429,11 +430,23 @@
             this.invalid_pass.Text = "Invalid Password!";
             this.invalid_pass.Visible = false;
             // 
+            // Account_Saved
+            // 
+            this.Account_Saved.AutoSize = true;
+            this.Account_Saved.ForeColor = System.Drawing.Color.Lime;
+            this.Account_Saved.Location = new System.Drawing.Point(195, 633);
+            this.Account_Saved.Name = "Account_Saved";
+            this.Account_Saved.Size = new System.Drawing.Size(81, 13);
+            this.Account_Saved.TabIndex = 57;
+            this.Account_Saved.Text = "Account Saved";
+            this.Account_Saved.Visible = false;
+            // 
             // Edit_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.Controls.Add(this.Account_Saved);
             this.Controls.Add(this.invalid_pass);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel17);
@@ -500,5 +513,6 @@
         private System.Windows.Forms.Label invalid_id;
         private System.Windows.Forms.Label invalid_name;
         private System.Windows.Forms.Label invalid_pass;
+        private System.Windows.Forms.Label Account_Saved;
     }
 }
