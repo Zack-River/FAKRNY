@@ -236,9 +236,11 @@ namespace Fakarny.UserControls
                     sr.WriteLine(enc.Encrypt(New_Phone_Textbox.Text));
                     sr.WriteLine(enc.Encrypt(New_Recovery_Email_Textbox.Text));
                 }
-                New_Phone_Textbox.Text = "Phone Number";
+                New_Name_Textbox.Text = "website or app name";
                 New_User_Id_Textbox.Text = "username or email id";
+                New_Password_Textbox.Text = "";
                 New_Phone_Textbox.Text = "Phone Number";
+                New_Recovery_Email_Textbox.Text = "Recovery Email";
                 Account_Saved.Show();
             }
 

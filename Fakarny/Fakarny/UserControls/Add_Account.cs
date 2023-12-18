@@ -227,7 +227,6 @@ namespace Fakarny.UserControls
             else
             {
                 invalid_phone.Hide();
-                New_Phone_Textbox.Text = "Phone Number";
                 New_Phone_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
             }
             if (save)
