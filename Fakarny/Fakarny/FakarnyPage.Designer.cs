@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FakarnyPage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.Show_Name_Combobox = new System.Windows.Forms.ComboBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.View_Contents_Button = new System.Windows.Forms.Button();
@@ -45,7 +47,6 @@
             this.Tabs_Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.add_Account1 = new Fakarny.UserControls.Add_Account();
             this.edit_Account1 = new Fakarny.UserControls.Edit_Account();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.Tabs_Panel.SuspendLayout();
@@ -68,6 +69,19 @@
             this.panel1.Size = new System.Drawing.Size(755, 681);
             this.panel1.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.WindowText;
+            this.button1.BackgroundImage = global::Fakarny.Properties.Resources.Search1;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(468, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(45, 41);
+            this.button1.TabIndex = 20;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Show_Name_Combobox
             // 
             this.Show_Name_Combobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
@@ -80,6 +94,7 @@
             this.Show_Name_Combobox.TabIndex = 19;
             this.Show_Name_Combobox.Text = "Choose Your Account From Here";
             this.Show_Name_Combobox.DropDown += new System.EventHandler(this.Show_Name_Combobox_DropDown);
+            this.Show_Name_Combobox.SelectedIndexChanged += new System.EventHandler(this.Show_Name_Combobox_SelectedIndexChanged);
             this.Show_Name_Combobox.SelectionChangeCommitted += new System.EventHandler(this.Show_Name_Combobox_SelectionChangeCommitted);
             // 
             // panel9
@@ -259,19 +274,6 @@
             this.edit_Account1.Size = new System.Drawing.Size(503, 681);
             this.edit_Account1.TabIndex = 1;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.WindowText;
-            this.button1.BackgroundImage = global::Fakarny.Properties.Resources.Search1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(468, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 41);
-            this.button1.TabIndex = 20;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FakarnyPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,6 +282,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.Tabs_Panel);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FakarnyPage";

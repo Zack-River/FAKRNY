@@ -117,6 +117,11 @@ namespace Fakarny
             }
         }
 
+        private void Show_Name_Combobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void Copy_Password_Button_Click(object sender, EventArgs e)
         {
             if (data.Password != null)
