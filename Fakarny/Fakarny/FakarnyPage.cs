@@ -23,6 +23,8 @@ namespace Fakarny
         }
         private void FakarnyPage_Load(object sender, EventArgs e)
         {
+            Search_Textbox.Hide();
+            button1.Hide();
             add_Account1.Hide();
             edit_Account1.Show();
             edit_Account1.BringToFront();
@@ -91,19 +93,29 @@ namespace Fakarny
                 Clipboard.SetDataObject(data.User_Name);
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (File.Exists(Program_path + Search_Textbox.Text + ".txt"))
-            {
-                Name_Label.Text = Search_Textbox.Text;
-                StreamReader sr = new StreamReader(Program_path + Search_Textbox.Text + ".txt");
-                string data = sr.ReadLine();
-                User_Id_Label.Text = data;
-                sr.Close();
+            Encryptor enc = new Encryptor(Key);
 
+            if (File.Exists(Program_path + "\\" + enc.Path_Safe_Encrypt(Search_Textbox.Text) + ".txt"))
+            {
+                data.Site_Name = Search_Textbox.Text;
+                Name_Label.Text = Search_Textbox.Text;
+                StreamReader sr = new StreamReader(Program_path + "\\" + enc.Path_Safe_Encrypt(Search_Textbox.Text) + ".txt");
+                data.IV = sr.ReadLine();
+                enc.IV = data.IV;
+                data.User_Name = enc.Decrypt(sr.ReadLine());
+                data.Password = enc.Decrypt(sr.ReadLine());
+                User_Id_Label.Text = data.User_Name;
+                data.Phone = enc.Decrypt(sr.ReadLine());
+                data.Recovery_Email = enc.Decrypt(sr.ReadLine());
+                sr.Close();
+                edit_Account1.Data_Set = data;
+                add_Account1.Set_Data = data;
+                Show_Name_Combobox.Text = "";
+                Show_Name_Combobox.SelectedText = Search_Textbox.Text;
             }
         }
-
 
         private void Copy_Password_Button_Click(object sender, EventArgs e)
         {

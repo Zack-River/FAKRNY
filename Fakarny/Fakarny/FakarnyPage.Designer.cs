@@ -38,7 +38,6 @@
             this.User_Id_Label = new System.Windows.Forms.Label();
             this.Name_Label = new System.Windows.Forms.Label();
             this.Add_Acc_Button = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.Search_Textbox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.Tabs_Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.add_Account1 = new Fakarny.UserControls.Add_Account();
             this.edit_Account1 = new Fakarny.UserControls.Edit_Account();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.Tabs_Panel.SuspendLayout();
@@ -54,10 +54,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.Show_Name_Combobox);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.Add_Acc_Button);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.Search_Textbox);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
@@ -182,16 +182,6 @@
             this.Add_Acc_Button.UseVisualStyleBackColor = true;
             this.Add_Acc_Button.Click += new System.EventHandler(this.Add_Acc_Button_Click_1);
             // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::Fakarny.Properties.Resources.Search1;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(486, 29);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(30, 30);
-            this.panel3.TabIndex = 5;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
             // Search_Textbox
             // 
             this.Search_Textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
@@ -199,9 +189,8 @@
             this.Search_Textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search_Textbox.ForeColor = System.Drawing.Color.White;
             this.Search_Textbox.Location = new System.Drawing.Point(521, 27);
-            this.Search_Textbox.Multiline = true;
             this.Search_Textbox.Name = "Search_Textbox";
-            this.Search_Textbox.Size = new System.Drawing.Size(207, 30);
+            this.Search_Textbox.Size = new System.Drawing.Size(207, 24);
             this.Search_Textbox.TabIndex = 4;
             this.Search_Textbox.Text = "Search Account";
             // 
@@ -270,6 +259,19 @@
             this.edit_Account1.Size = new System.Drawing.Size(503, 681);
             this.edit_Account1.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.WindowText;
+            this.button1.BackgroundImage = global::Fakarny.Properties.Resources.Search1;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(468, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(45, 41);
+            this.button1.TabIndex = 20;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FakarnyPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,7 +301,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox Search_Textbox;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Add_Acc_Button;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button Copy_Username_Button;
@@ -311,5 +312,6 @@
         private UserControls.Edit_Account edit_Account1;
         private UserControls.Add_Account add_Account1;
         private System.Windows.Forms.ComboBox Show_Name_Combobox;
+        private System.Windows.Forms.Button button1;
     }
 }
