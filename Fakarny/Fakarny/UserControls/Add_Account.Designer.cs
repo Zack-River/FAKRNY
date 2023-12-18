@@ -415,7 +415,6 @@
             this.invalid_pass.TabIndex = 59;
             this.invalid_pass.Text = "Invalid Password!";
             this.invalid_pass.Visible = false;
-            this.invalid_pass.Click += new System.EventHandler(this.invalid_pass_Click);
             // 
             // invalid_phone
             // 
@@ -471,7 +470,6 @@
             this.label7.TabIndex = 53;
             this.label7.Text = "Invalid Name!";
             this.label7.Visible = false;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 

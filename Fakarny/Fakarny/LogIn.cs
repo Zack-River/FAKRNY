@@ -46,12 +46,10 @@ namespace Fakarny
                 Login_Username_Error_Panel.Visible = false;
                 Wrong_Password_Label.Hide();
                 Login_Password_Error_Panel.Visible = false;
-                //string name = Login_UserName_TextBox.Text;  // removed after adding the full name section
                 Login_UserName_TextBox.Text = "Username";
                 Login_Password_TextBox.Text = "Password";
                 Login_UserName_TextBox.ForeColor = Color.FromArgb(149, 149, 149);
                 Login_Password_TextBox.ForeColor = Color.FromArgb(149, 149, 149);
-                //MessageBox.Show("Welcome " + name,"Loged In");
                 FakarnyPage fk = new FakarnyPage(Program_path + "\\data\\" + Input_Username, PassWord);
                 this.Hide();
                 fk.ShowDialog();

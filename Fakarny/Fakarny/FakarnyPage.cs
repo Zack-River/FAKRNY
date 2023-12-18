@@ -43,7 +43,7 @@ namespace Fakarny
         {
             if (Show_Name_Combobox.SelectedIndex >= 0)
             {
-                add_Account1.Data_Set = data;
+                add_Account1.Set_Data = data;
                 add_Account1.Enter_data();
                 edit_Account1.Hide();
                 add_Account1.Show();
@@ -81,13 +81,14 @@ namespace Fakarny
                 data.Phone = enc.Decrypt(sr.ReadLine());
                 data.Recovery_Email = enc.Decrypt(sr.ReadLine());
             }
-            add_Account1.Data_Set = data;
+            add_Account1.Set_Data = data;
             edit_Account1.Data_Set = data;
         }
 
         private void Copy_Username_Button_Click(object sender, EventArgs e)
         {
-            Clipboard.SetDataObject(data.User_Name);
+            if (data.User_Name != null)
+                Clipboard.SetDataObject(data.User_Name);
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -95,17 +96,19 @@ namespace Fakarny
             if (File.Exists(Program_path + Search_Textbox.Text + ".txt"))
             {
                 Name_Label.Text = Search_Textbox.Text;
-                StreamReader r = new StreamReader(Program_path + Search_Textbox.Text + ".txt");
-                string data = r.ReadLine();
+                StreamReader sr = new StreamReader(Program_path + Search_Textbox.Text + ".txt");
+                string data = sr.ReadLine();
                 User_Id_Label.Text = data;
-                r.Close();
+                sr.Close();
 
             }
         }
 
+
         private void Copy_Password_Button_Click(object sender, EventArgs e)
         {
-            Clipboard.SetDataObject(data.Password);
+            if (data.Password != null)
+                Clipboard.SetDataObject(data.Password);
         }
 
         private void Show_Name_Combobox_DropDown(object sender, EventArgs e)

@@ -7,9 +7,8 @@ namespace Fakarny.UserControls
 {
     public partial class Edit_Account : UserControl
     {
-        string Program_path, site_name, Key;
+        string Program_path, Key;
         Data data;
-        bool name = false, id = false, pass = false, phone = false, email = false;
 
         public Edit_Account()
         {
@@ -40,8 +39,8 @@ namespace Fakarny.UserControls
         }
         private void Show_Button_Click(object sender, EventArgs e)
         {
-            Move_Panel.Location = new System.Drawing.Point(81, 560);
-            panel17.Location = new System.Drawing.Point(37,413);
+            Move_Panel.Location = new Point(81, 560);
+            panel17.Location = new Point(37, 413);
             panel17.Visible = true;
             show_less_bt.Visible = true;
             Show_Button.Visible = false;
@@ -50,13 +49,12 @@ namespace Fakarny.UserControls
 
         private void show_less_bt_Click(object sender, EventArgs e)
         {
-            Move_Panel.Location = new System.Drawing.Point(81, 409);
-            panel17.Location = new System.Drawing.Point(37, 483);
+            Move_Panel.Location = new Point(81, 409);
+            panel17.Location = new Point(37, 483);
             panel17.Visible = false;
             show_less_bt.Visible = false;
             Show_Button.Visible = true;
         }
-
 
 
         private void New_Name_Textbox_Enter(object sender, EventArgs e)
@@ -78,8 +76,6 @@ namespace Fakarny.UserControls
         private void New_Name_Textbox_Changed(object sender, EventArgs e)
         {
             New_Name_Textbox.ForeColor = Color.White;
-            site_name = New_Name_Textbox.Text;
-            name = true;
         }
 
 
@@ -94,7 +90,6 @@ namespace Fakarny.UserControls
         private void New_User_Id_Textbox_Changed(object sender, EventArgs e)
         {
             New_User_Id_Textbox.ForeColor = Color.White;
-            id = true;
         }
         private void New_User_Id_Textbox_Leave(object sender, EventArgs e)
         {
@@ -128,8 +123,6 @@ namespace Fakarny.UserControls
         private void New_Password_Textbox_Changed(object sender, EventArgs e)
         {
             New_Password_Textbox.ForeColor = Color.White;
-            pass = true;
-
         }
 
 
@@ -152,15 +145,12 @@ namespace Fakarny.UserControls
         private void New_Recovery_Email_Textbox_Changed(object sender, EventArgs e)
         {
             New_Recovery_Email_Textbox.ForeColor = Color.White;
-            email = true;
         }
 
 
         private void New_Phone_Textbox_Changed(object sender, EventArgs e)
         {
             New_Phone_Textbox.ForeColor = Color.White;
-            if (show_less_bt.Visible)
-                phone = true;
         }
         private void New_Phone_Textbox_Enter(object sender, EventArgs e)
         {
@@ -183,13 +173,13 @@ namespace Fakarny.UserControls
         {
             Account_Saved.Hide();
             bool save = true;
-            if(New_Name_Textbox.Text == ""|| New_Name_Textbox.Text == "website or app name")
+            if (New_Name_Textbox.Text == "" || New_Name_Textbox.Text == "website or app name")
             {
                 invalid_name.Show();
                 save = false;
             }
             else
-                invalid_id.Hide();
+                invalid_name.Hide();
 
             if (New_User_Id_Textbox.Text == "" || New_User_Id_Textbox.Text == "username or email id")
             {
@@ -197,7 +187,7 @@ namespace Fakarny.UserControls
                 save = false;
             }
             else
-                invalid_name.Hide();
+                invalid_id.Hide();
 
             if (New_Password_Textbox.Text == "")
             {
@@ -222,12 +212,6 @@ namespace Fakarny.UserControls
                 Encryptor enc = new Encryptor(Key);
                 string en = enc.Path_Safe_Encrypt(New_Name_Textbox.Text);
                 enc.IVGenerate();
-                //string hashen = SignUp.ComputeHash(en);
-                //using (StreamWriter sr = File.AppendText(Program_path + "\\Index.txt"))
-                //{
-                //    sr.WriteLine(en);
-                //    sr.WriteLine(hashen);
-                //}
                 using (StreamWriter sr = File.CreateText(Program_path + "\\" + en + ".txt"))
                 {
                     sr.WriteLine(enc.IV);
@@ -237,64 +221,18 @@ namespace Fakarny.UserControls
                     sr.WriteLine(enc.Encrypt(New_Recovery_Email_Textbox.Text));
                 }
                 New_Name_Textbox.Text = "website or app name";
+                New_Name_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
                 New_User_Id_Textbox.Text = "username or email id";
+                New_User_Id_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
                 New_Password_Textbox.Text = "";
+                New_Password_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
                 New_Phone_Textbox.Text = "Phone Number";
+                New_Phone_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
                 New_Recovery_Email_Textbox.Text = "Recovery Email";
+                New_Recovery_Email_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
                 Account_Saved.Show();
             }
 
-        }
-
-        public bool validation()
-        {
-            if (name)
-            {
-                invalid_name.Visible = false;
-            }
-            else
-            {
-                invalid_name.Visible = true;
-            }
-            if (id)
-            {
-                invalid_id.Visible = false;
-            }
-            else
-            {
-                invalid_id.Visible = true;
-            }
-            if (pass)
-            {
-                invalid_pass.Visible = false;
-            }
-            else
-            {
-                invalid_pass.Visible = true;
-            }
-            if (email)
-            {
-                invalid_mail.Visible = false;
-            }
-            else
-            {
-                invalid_mail.Visible = true;
-            }
-            if (phone)
-            {
-                invalid_phone.Visible = false;
-            }
-            else
-            {
-                invalid_phone.Visible = true;
-            }
-            return name && pass && id;
-
-        }
-
-        public string edit_changed()
-        {
-            return site_name;
         }
 
         private void Edit_Account_Load(object sender, EventArgs e)

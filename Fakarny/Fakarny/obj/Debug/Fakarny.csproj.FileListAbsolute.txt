@@ -76,4 +76,5 @@ C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.UserCont
 C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.GenerateResource.cache
 C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.exe
 C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.pdb
-C:\Users\dell\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.AssemblyReference.cache
+C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.CoreCompileInputs.cache

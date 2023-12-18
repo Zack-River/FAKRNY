@@ -278,7 +278,7 @@ namespace Fakarny
                 {
                     sw.Write(ComputeHash(SignUp_Password_Textbox.Text));
                 }
-                Directory.CreateDirectory(File_ext+ "\\Info");
+                Directory.CreateDirectory(File_ext + "\\Info");
                 using (StreamWriter sw = File.CreateText(File_ext + @"\Info\Info.txt"))
                 {
                     sw.WriteLine(SignUp_Fullname_Textbox.Text);
@@ -302,12 +302,6 @@ namespace Fakarny
         {
             SignUp_Button.ForeColor = Color.FromArgb(149, 149, 149);
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
 
         #endregion
 

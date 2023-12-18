@@ -9,7 +9,6 @@ namespace Fakarny.UserControls
     {
         string Program_path, Key;
         Data data;
-        bool name = false, id = false, pass = false, phone = false, mail = false;
         bool NameChange = false;
         public Add_Account()
         {
@@ -41,8 +40,8 @@ namespace Fakarny.UserControls
         private void Show_Button_Click(object sender, EventArgs e)
         {
 
-            Move_Panel.Location = new System.Drawing.Point(81, 560);
-            panel17.Location = new System.Drawing.Point(37, 413);
+            Move_Panel.Location = new Point(81, 560);
+            panel17.Location = new Point(37, 413);
             panel17.Visible = true;
             show_less_bt.Visible = true;
             Show_Button.Visible = false;
@@ -70,7 +69,6 @@ namespace Fakarny.UserControls
         {
             New_Name_Textbox.ForeColor = Color.White;
             NameChange = true;
-            name = true;
         }
 
 
@@ -92,7 +90,6 @@ namespace Fakarny.UserControls
         private void New_Password_Textbox_Changed(object sender, EventArgs e)
         {
             New_Password_Textbox.ForeColor = Color.White;
-            pass = true;
         }
 
 
@@ -106,7 +103,6 @@ namespace Fakarny.UserControls
         private void New_User_Id_Textbox_Changed(object sender, EventArgs e)
         {
             New_User_Id_Textbox.ForeColor = Color.White;
-            id = true;
         }
         private void New_User_Id_Textbox_Leave(object sender, EventArgs e)
         {
@@ -142,14 +138,12 @@ namespace Fakarny.UserControls
         private void New_Recovery_Email_Changed(object sender, EventArgs e)
         {
             New_Recovery_Email_Textbox.ForeColor = Color.White;
-            mail = true;
         }
 
 
         private void New_Phone_Textbox_Changed(object sender, EventArgs e)
         {
             New_Phone_Textbox.ForeColor = Color.White;
-            phone = true;
         }
         private void New_Phone_Textbox_Enter(object sender, EventArgs e)
         {
@@ -161,21 +155,11 @@ namespace Fakarny.UserControls
 
         private void show_less_bt_Click_1(object sender, EventArgs e)
         {
-            Move_Panel.Location = new System.Drawing.Point(81, 409);
-            panel17.Location = new System.Drawing.Point(37, 483);
+            Move_Panel.Location = new Point(81, 409);
+            panel17.Location = new Point(37, 483);
             panel17.Visible = false;
             show_less_bt.Visible = false;
             Show_Button.Visible = true;
-        }
-
-        private void invalid_pass_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void New_Phone_Textbox_Leave(object sender, EventArgs e)
@@ -195,13 +179,14 @@ namespace Fakarny.UserControls
         {
             Account_Updated.Hide();
             bool save = true;
+
             if (New_Name_Textbox.Text == "" || New_Name_Textbox.Text == "website or app name")
             {
                 invalid_name.Show();
                 save = false;
             }
             else
-                invalid_id.Hide();
+                invalid_name.Hide();
 
             if (New_User_Id_Textbox.Text == "" || New_User_Id_Textbox.Text == "username or email id")
             {
@@ -209,7 +194,7 @@ namespace Fakarny.UserControls
                 save = false;
             }
             else
-                invalid_name.Hide();
+                invalid_id.Hide();
 
             if (New_Password_Textbox.Text == "")
             {
@@ -227,7 +212,7 @@ namespace Fakarny.UserControls
             else
             {
                 invalid_phone.Hide();
-                New_Phone_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
+                //New_Phone_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
             }
             if (save)
             {
@@ -258,7 +243,7 @@ namespace Fakarny.UserControls
             New_Recovery_Email_Textbox.Text = data.Recovery_Email;
         }
 
-        public Data Data_Set
+        public Data Set_Data
         {
             get
             {
