@@ -93,8 +93,6 @@
             this.Show_Name_Combobox.Size = new System.Drawing.Size(445, 32);
             this.Show_Name_Combobox.TabIndex = 19;
             this.Show_Name_Combobox.Text = "Choose Your Account From Here";
-            this.Show_Name_Combobox.DropDown += new System.EventHandler(this.Show_Name_Combobox_DropDown);
-            this.Show_Name_Combobox.SelectedIndexChanged += new System.EventHandler(this.Show_Name_Combobox_SelectedIndexChanged);
             this.Show_Name_Combobox.SelectionChangeCommitted += new System.EventHandler(this.Show_Name_Combobox_SelectionChangeCommitted);
             // 
             // panel9

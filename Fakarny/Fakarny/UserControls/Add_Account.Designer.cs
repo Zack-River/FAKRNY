@@ -278,7 +278,7 @@
             this.show_less_bt.Text = "Show less";
             this.show_less_bt.UseVisualStyleBackColor = true;
             this.show_less_bt.Visible = false;
-            this.show_less_bt.Click += new System.EventHandler(this.show_less_bt_Click_1);
+            this.show_less_bt.Click += new System.EventHandler(this.Show_Less_Button_Click);
             // 
             // Show_Button
             // 
@@ -293,7 +293,7 @@
             this.Show_Button.TabIndex = 26;
             this.Show_Button.Text = "Show More";
             this.Show_Button.UseVisualStyleBackColor = true;
-            this.Show_Button.Click += new System.EventHandler(this.Show_Button_Click);
+            this.Show_Button.Click += new System.EventHandler(this.Show_More_Button_Click);
             // 
             // Save_Password_Button
             // 

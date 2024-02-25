@@ -8,7 +8,7 @@ namespace Fakarny
 {
     public partial class FakarnyPage : Form
     {
-        string Program_path = "1", Key, temp;
+        string Program_path = "1", Key;
         string[] Names_before_Clean, Names;
         Data data;
         public FakarnyPage(string Program_path, string Key)
@@ -18,8 +18,11 @@ namespace Fakarny
             InitializeComponent();
             edit_Account1.Program_Path = Program_path;
             edit_Account1.key = Key;
+            edit_Account1.main_form = this;
             add_Account1.Program_Path = Program_path;
             add_Account1.key = Key;
+            add_Account1.main_form = this;
+
         }
         private void FakarnyPage_Load(object sender, EventArgs e)
         {
@@ -28,24 +31,14 @@ namespace Fakarny
             add_Account1.Hide();
             edit_Account1.Show();
             edit_Account1.BringToFront();
-
-            Names_before_Clean = Directory.GetFiles(Program_path, "*.txt");
-            Names = new string[Names_before_Clean.Length];
-            Encryptor enc = new Encryptor(Key);
-            for (int i = 0; i < Names_before_Clean.Length; i++)
-            {
-                temp = Names_before_Clean[i].Substring(Program_path.Length + 1);
-                temp = temp.Remove(temp.Length - 4);
-                Names[i] = enc.Path_Safe_Decrypt(temp);
-            }
-            Show_Name_Combobox.Items.AddRange(Names);
+            Load_Combobox();
         }
 
         private void View_Contents_Button_Click(object sender, EventArgs e)
         {
             if (Show_Name_Combobox.SelectedIndex >= 0)
             {
-                add_Account1.Set_Data = data;
+                add_Account1.Data_Set = data;
                 add_Account1.Enter_data();
                 edit_Account1.Hide();
                 add_Account1.Show();
@@ -58,11 +51,6 @@ namespace Fakarny
             add_Account1.Hide();
             edit_Account1.Show();
             edit_Account1.BringToFront();
-        }
-
-        private void edit_Account1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void Show_Name_Combobox_SelectionChangeCommitted(object sender, EventArgs e)
@@ -83,7 +71,7 @@ namespace Fakarny
                 data.Phone = enc.Decrypt(sr.ReadLine());
                 data.Recovery_Email = enc.Decrypt(sr.ReadLine());
             }
-            add_Account1.Set_Data = data;
+            add_Account1.Data_Set = data;
             edit_Account1.Data_Set = data;
         }
 
@@ -93,6 +81,14 @@ namespace Fakarny
                 Clipboard.SetDataObject(data.User_Name);
         }
 
+        private void Copy_Password_Button_Click(object sender, EventArgs e)
+        {
+            if (data.Password != null)
+                Clipboard.SetDataObject(data.Password);
+        }
+
+
+        //Currently Deactivated Button
         private void button1_Click(object sender, EventArgs e)
         {
             Encryptor enc = new Encryptor(Key);
@@ -111,25 +107,16 @@ namespace Fakarny
                 data.Recovery_Email = enc.Decrypt(sr.ReadLine());
                 sr.Close();
                 edit_Account1.Data_Set = data;
-                add_Account1.Set_Data = data;
+                add_Account1.Data_Set = data;
                 Show_Name_Combobox.Text = "";
                 Show_Name_Combobox.SelectedText = Search_Textbox.Text;
             }
         }
+        //
 
-        private void Show_Name_Combobox_SelectedIndexChanged(object sender, EventArgs e)
+        public void Load_Combobox()
         {
-
-        }
-
-        private void Copy_Password_Button_Click(object sender, EventArgs e)
-        {
-            if (data.Password != null)
-                Clipboard.SetDataObject(data.Password);
-        }
-
-        private void Show_Name_Combobox_DropDown(object sender, EventArgs e)
-        {
+            string temp;
             Names_before_Clean = Directory.GetFiles(Program_path, "*.txt");
             Names = new string[Names_before_Clean.Length];
             Encryptor enc = new Encryptor(Key);
@@ -141,8 +128,8 @@ namespace Fakarny
             }
             Show_Name_Combobox.Items.Clear();
             Show_Name_Combobox.Items.AddRange(Names);
-
         }
+
 
         private void add_Account1_Load(object sender, EventArgs e)
         {
@@ -234,17 +221,6 @@ namespace Fakarny
             }
         }
 
-        public string Path_Safe_Encrypt(string plaintext)
-        {
-            using (ICryptoTransform encryptor = aes.CreateEncryptor(KeyByte, iv))
-            {
-                byte[] plaintextBytes = Encoding.UTF8.GetBytes(plaintext);
-                Encrypted = encryptor.TransformFinalBlock(plaintextBytes, 0, plaintextBytes.Length);
-                string s = Convert.ToBase64String(Encrypted);
-                Make_Safe(ref s);
-                return s;
-            }
-        }
 
         private void Make_Safe(ref string s)
         {
@@ -269,6 +245,17 @@ namespace Fakarny
             return s;
         }
 
+        public string Path_Safe_Encrypt(string plaintext)
+        {
+            using (ICryptoTransform encryptor = aes.CreateEncryptor(KeyByte, iv))
+            {
+                byte[] plaintextBytes = Encoding.UTF8.GetBytes(plaintext);
+                Encrypted = encryptor.TransformFinalBlock(plaintextBytes, 0, plaintextBytes.Length);
+                string s = Convert.ToBase64String(Encrypted);
+                Make_Safe(ref s);
+                return s;
+            }
+        }
         public string Path_Safe_Decrypt(string Encrypted)
         {
             Encrypted = Make_UnSafe(Encrypted);

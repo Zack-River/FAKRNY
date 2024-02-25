@@ -8,6 +8,7 @@ namespace Fakarny.UserControls
     public partial class Edit_Account : UserControl
     {
         string Program_path, Key;
+        public FakarnyPage main_form;
         Data data;
 
         public Edit_Account()
@@ -37,7 +38,7 @@ namespace Fakarny.UserControls
                 this.Key = value;
             }
         }
-        private void Show_Button_Click(object sender, EventArgs e)
+        private void Show_More_Button_Click(object sender, EventArgs e)
         {
             Move_Panel.Location = new Point(81, 560);
             panel17.Location = new Point(37, 413);
@@ -47,7 +48,7 @@ namespace Fakarny.UserControls
 
         }
 
-        private void show_less_bt_Click(object sender, EventArgs e)
+        private void Show_Less_Button_Click(object sender, EventArgs e)
         {
             Move_Panel.Location = new Point(81, 409);
             panel17.Location = new Point(37, 483);
@@ -56,7 +57,7 @@ namespace Fakarny.UserControls
             Show_Button.Visible = true;
         }
 
-
+        #region New_Name_Textbox Handling
         private void New_Name_Textbox_Enter(object sender, EventArgs e)
         {
             if (New_Name_Textbox.Text == "" || New_Name_Textbox.Text == "website or app name")
@@ -77,9 +78,9 @@ namespace Fakarny.UserControls
         {
             New_Name_Textbox.ForeColor = Color.White;
         }
+        #endregion
 
-
-
+        #region New_User_Id_Textbox Handling
         private void New_User_Id_Textbox_Enter(object sender, EventArgs e)
         {
             if (New_User_Id_Textbox.Text == "" || New_User_Id_Textbox.Text == "username or email id")
@@ -100,8 +101,9 @@ namespace Fakarny.UserControls
                 return;
             }
         }
+        #endregion
 
-
+        #region New_Password_Textbox Handling
         private void New_Password_Textbox_Enter(object sender, EventArgs e)
         {
             if (New_Password_Textbox.Text == "")
@@ -124,8 +126,9 @@ namespace Fakarny.UserControls
         {
             New_Password_Textbox.ForeColor = Color.White;
         }
+        #endregion
 
-
+        #region New_Recovery_Email_Textbox Handling
         private void New_Recovery_Email_Textbox_Enter(object sender, EventArgs e)
         {
             if (New_Recovery_Email_Textbox.Text == "" || New_Recovery_Email_Textbox.Text == "Recovery Email")
@@ -146,8 +149,9 @@ namespace Fakarny.UserControls
         {
             New_Recovery_Email_Textbox.ForeColor = Color.White;
         }
+        #endregion
 
-
+        #region New_Phone_Textbox Handling
         private void New_Phone_Textbox_Changed(object sender, EventArgs e)
         {
             New_Phone_Textbox.ForeColor = Color.White;
@@ -168,45 +172,12 @@ namespace Fakarny.UserControls
                 return;
             }
         }
-
+        #endregion
         private void Save_Password_Button_Click(object sender, EventArgs e)
         {
             Account_Saved.Hide();
-            bool save = true;
-            if (New_Name_Textbox.Text == "" || New_Name_Textbox.Text == "website or app name")
-            {
-                invalid_name.Show();
-                save = false;
-            }
-            else
-                invalid_name.Hide();
+            bool save = Check_Input();
 
-            if (New_User_Id_Textbox.Text == "" || New_User_Id_Textbox.Text == "username or email id")
-            {
-                invalid_id.Show();
-                save = false;
-            }
-            else
-                invalid_id.Hide();
-
-            if (New_Password_Textbox.Text == "")
-            {
-                invalid_pass.Show();
-                save = false;
-            }
-            else
-                invalid_pass.Hide();
-
-            if ((New_Phone_Textbox.Text.Length > 15 || New_Phone_Textbox.Text.Length < 10 && New_Phone_Textbox.Text.Length != 0) && New_Phone_Textbox.Visible == true)
-            {
-                invalid_phone.Show();
-                save = false;
-            }
-            else
-            {
-                invalid_phone.Hide();
-                New_Phone_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
-            }
             if (save)
             {
                 Encryptor enc = new Encryptor(Key);
@@ -231,13 +202,59 @@ namespace Fakarny.UserControls
                 New_Recovery_Email_Textbox.Text = "Recovery Email";
                 New_Recovery_Email_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
                 Account_Saved.Show();
-            }
 
+                main_form.Load_Combobox();
+            }
+            else
+            {
+                //Make a Failed to save Panel and show it
+            }
         }
 
-        private void Edit_Account_Load(object sender, EventArgs e)
+        private bool Check_Input()
         {
+            bool checker = true;
 
+            //Check New Name TextBox
+            if (New_Name_Textbox.Text == "" || New_Name_Textbox.Text == "website or app name")
+            {
+                invalid_name.Show();
+                checker = false;
+            }
+            else
+                invalid_name.Hide();
+
+            //Check New User Id TextBox
+            if (New_User_Id_Textbox.Text == "" || New_User_Id_Textbox.Text == "username or email id")
+            {
+                invalid_id.Show();
+                checker = false;
+            }
+            else
+                invalid_id.Hide();
+
+            //Check New Password TextBox
+            if (New_Password_Textbox.Text == "")
+            {
+                invalid_pass.Show();
+                checker = false;
+            }
+            else
+                invalid_pass.Hide();
+
+            //Check New Phone TextBox
+            if ((New_Phone_Textbox.Text.Length > 15 || New_Phone_Textbox.Text.Length < 10 && New_Phone_Textbox.Text.Length != 0) && New_Phone_Textbox.Visible == true)
+            {
+                invalid_phone.Show();
+                checker = false;
+            }
+            else
+            {
+                invalid_phone.Hide();
+                New_Phone_Textbox.ForeColor = Color.FromArgb(149, 149, 149);
+            }
+
+            return checker;
         }
 
         public Data Data_Set
