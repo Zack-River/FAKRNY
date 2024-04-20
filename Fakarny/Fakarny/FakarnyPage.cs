@@ -8,9 +8,11 @@ namespace Fakarny
 {
     public partial class FakarnyPage : Form
     {
-        string Program_path = "1", Key;
+        string Program_path, Key;
         string[] Names_before_Clean, Names;
+        int failed_tries;
         Data data;
+        public int Failed_tries { get { return failed_tries; } }
         public FakarnyPage(string Program_path, string Key)
         {
             this.Program_path = Program_path;
@@ -36,7 +38,7 @@ namespace Fakarny
 
         private void View_Contents_Button_Click(object sender, EventArgs e)
         {
-            if (Show_Name_Combobox.SelectedIndex >= 0)
+            if (Show_Name_Combobox.SelectedIndex >= 0)//&&Validate_Password()
             {
                 add_Account1.Data_Set = data;
                 add_Account1.Enter_data();
@@ -83,7 +85,7 @@ namespace Fakarny
 
         private void Copy_Password_Button_Click(object sender, EventArgs e)
         {
-            if (data.Password != null)
+            if (data.Password != null)//&& Validate_Password()
                 Clipboard.SetDataObject(data.Password);
         }
 
@@ -128,6 +130,23 @@ namespace Fakarny
             }
             Show_Name_Combobox.Items.Clear();
             Show_Name_Combobox.Items.AddRange(Names);
+        }
+
+        public bool Validate_Password()
+        {
+            Validation validation = new Validation();
+            validation.ShowDialog();
+
+            if (File.ReadAllText(Program_path + ".txt") == SignUp.ComputeHash(validation.Password))
+            {
+                return true;
+            }
+            else
+            {
+                failed_tries++;
+                if (failed_tries > 3) { this.Close(); }
+                return false;
+            }
         }
 
 

@@ -461,6 +461,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Edit_Account";
             this.Size = new System.Drawing.Size(503, 681);
+            this.Load += new System.EventHandler(this.Edit_Account_Load);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel15.ResumeLayout(false);

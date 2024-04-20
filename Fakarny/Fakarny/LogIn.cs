@@ -129,11 +129,6 @@ namespace Fakarny
             this.Show();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, System.EventArgs e)
         {
             Program_path = Directory.GetCurrentDirectory();

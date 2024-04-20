@@ -257,6 +257,11 @@ namespace Fakarny.UserControls
             return checker;
         }
 
+        private void Edit_Account_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public Data Data_Set
         {
             get

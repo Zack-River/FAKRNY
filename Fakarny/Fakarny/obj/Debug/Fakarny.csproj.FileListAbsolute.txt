@@ -78,3 +78,4 @@ C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.exe
 C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.pdb
 C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.AssemblyReference.cache
 C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\GitHub\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.Validation.resources
