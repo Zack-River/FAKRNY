@@ -175,6 +175,8 @@ namespace Fakarny.UserControls
         #endregion
         private void Save_Password_Button_Click(object sender, EventArgs e)
         {
+            main_form.Validate_Password();
+
             Account_Saved.Hide();
             bool save = Check_Input();
 

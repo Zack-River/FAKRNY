@@ -10,9 +10,8 @@ namespace Fakarny
     {
         string Program_path, Key;
         string[] Names_before_Clean, Names;
-        int failed_tries;
+        Validation validation = new Validation();
         Data data;
-        public int Failed_tries { get { return failed_tries; } }
         public FakarnyPage(string Program_path, string Key)
         {
             this.Program_path = Program_path;
@@ -24,7 +23,8 @@ namespace Fakarny
             add_Account1.Program_Path = Program_path;
             add_Account1.key = Key;
             add_Account1.main_form = this;
-
+            validation.Key = Key;
+            validation.main_form = this;
         }
         private void FakarnyPage_Load(object sender, EventArgs e)
         {
@@ -38,7 +38,7 @@ namespace Fakarny
 
         private void View_Contents_Button_Click(object sender, EventArgs e)
         {
-            if (Show_Name_Combobox.SelectedIndex >= 0)//&&Validate_Password()
+            if (Show_Name_Combobox.SelectedIndex >= 0 && Validate_Password())//&&Validate_Password()
             {
                 add_Account1.Data_Set = data;
                 add_Account1.Enter_data();
@@ -79,13 +79,13 @@ namespace Fakarny
 
         private void Copy_Username_Button_Click(object sender, EventArgs e)
         {
-            if (data.User_Name != null)
+            if (data.User_Name != null && Validate_Password())
                 Clipboard.SetDataObject(data.User_Name);
         }
 
         private void Copy_Password_Button_Click(object sender, EventArgs e)
         {
-            if (data.Password != null)//&& Validate_Password()
+            if (data.Password != null && Validate_Password())//&& Validate_Password()
                 Clipboard.SetDataObject(data.Password);
         }
 
@@ -132,19 +132,17 @@ namespace Fakarny
             Show_Name_Combobox.Items.AddRange(Names);
         }
 
+
         public bool Validate_Password()
         {
-            Validation validation = new Validation();
             validation.ShowDialog();
 
-            if (File.ReadAllText(Program_path + ".txt") == SignUp.ComputeHash(validation.Password))
+            if (validation.valid)
             {
                 return true;
             }
             else
             {
-                failed_tries++;
-                if (failed_tries > 3) { this.Close(); }
                 return false;
             }
         }

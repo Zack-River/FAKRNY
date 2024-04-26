@@ -44,7 +44,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(313, 173);
+            this.panel1.Size = new System.Drawing.Size(314, 173);
             this.panel1.TabIndex = 3;
             // 
             // Add_Acc_Button
@@ -70,7 +70,6 @@
             this.label1.Size = new System.Drawing.Size(284, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Enter Password to continue:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
@@ -91,7 +90,6 @@
             this.MinimizeBox = false;
             this.Name = "Validation";
             this.Text = "panel1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
