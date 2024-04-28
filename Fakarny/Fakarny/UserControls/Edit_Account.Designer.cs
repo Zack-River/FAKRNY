@@ -42,7 +42,6 @@
             this.Move_Panel = new System.Windows.Forms.Panel();
             this.show_less_bt = new System.Windows.Forms.Button();
             this.Show_Button = new System.Windows.Forms.Button();
-            this.Save_Password_Button = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.New_Password_Textbox = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.invalid_pass = new System.Windows.Forms.Label();
             this.Account_Saved = new System.Windows.Forms.Label();
+            this.Save_Password_Button = new System.Windows.Forms.Button();
             this.panel17.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -206,7 +206,7 @@
             // show_less_bt
             // 
             this.show_less_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.show_less_bt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.show_less_bt.ForeColor = System.Drawing.Color.White;
             this.show_less_bt.Location = new System.Drawing.Point(0, 0);
             this.show_less_bt.Name = "show_less_bt";
             this.show_less_bt.Size = new System.Drawing.Size(165, 42);
@@ -222,7 +222,7 @@
             this.Show_Button.FlatAppearance.BorderSize = 2;
             this.Show_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
             this.Show_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Show_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.Show_Button.ForeColor = System.Drawing.Color.White;
             this.Show_Button.Location = new System.Drawing.Point(0, 0);
             this.Show_Button.Name = "Show_Button";
             this.Show_Button.Size = new System.Drawing.Size(165, 42);
@@ -230,21 +230,6 @@
             this.Show_Button.Text = "Show More";
             this.Show_Button.UseVisualStyleBackColor = true;
             this.Show_Button.Click += new System.EventHandler(this.Show_More_Button_Click);
-            // 
-            // Save_Password_Button
-            // 
-            this.Save_Password_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.Save_Password_Button.FlatAppearance.BorderSize = 2;
-            this.Save_Password_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.Save_Password_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Save_Password_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.Save_Password_Button.Location = new System.Drawing.Point(175, 0);
-            this.Save_Password_Button.Name = "Save_Password_Button";
-            this.Save_Password_Button.Size = new System.Drawing.Size(165, 42);
-            this.Save_Password_Button.TabIndex = 27;
-            this.Save_Password_Button.Text = "Save Account";
-            this.Save_Password_Button.UseVisualStyleBackColor = true;
-            this.Save_Password_Button.Click += new System.EventHandler(this.Save_Password_Button_Click);
             // 
             // panel7
             // 
@@ -440,6 +425,21 @@
             this.Account_Saved.Text = "Account Saved";
             this.Account_Saved.Visible = false;
             // 
+            // Save_Password_Button
+            // 
+            this.Save_Password_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.Save_Password_Button.FlatAppearance.BorderSize = 2;
+            this.Save_Password_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.Save_Password_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Save_Password_Button.ForeColor = System.Drawing.Color.White;
+            this.Save_Password_Button.Location = new System.Drawing.Point(175, 0);
+            this.Save_Password_Button.Name = "Save_Password_Button";
+            this.Save_Password_Button.Size = new System.Drawing.Size(165, 42);
+            this.Save_Password_Button.TabIndex = 27;
+            this.Save_Password_Button.Text = "Save Account";
+            this.Save_Password_Button.UseVisualStyleBackColor = true;
+            this.Save_Password_Button.Click += new System.EventHandler(this.Save_Password_Button_Click);
+            // 
             // Edit_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,7 +491,6 @@
         private System.Windows.Forms.TextBox New_Recovery_Email_Textbox;
         private System.Windows.Forms.Panel Move_Panel;
         private System.Windows.Forms.Button Show_Button;
-        private System.Windows.Forms.Button Save_Password_Button;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox New_Password_Textbox;
         private System.Windows.Forms.Label Password;
@@ -513,5 +512,6 @@
         private System.Windows.Forms.Label invalid_name;
         private System.Windows.Forms.Label invalid_pass;
         private System.Windows.Forms.Label Account_Saved;
+        private System.Windows.Forms.Button Save_Password_Button;
     }
 }

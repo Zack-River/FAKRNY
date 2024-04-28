@@ -57,6 +57,7 @@ namespace Fakarny.UserControls
             Show_Button.Visible = true;
         }
 
+
         #region New_Name_Textbox Handling
         private void New_Name_Textbox_Enter(object sender, EventArgs e)
         {
