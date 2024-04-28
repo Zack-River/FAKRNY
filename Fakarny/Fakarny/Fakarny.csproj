@@ -178,6 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Profile-Icon.ico" />
+    <None Include="Resources\Question_Mark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

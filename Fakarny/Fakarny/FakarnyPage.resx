@@ -117,6 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>FAKARNY - فكرني Manual
+
+Hi there! Let's explore FAKARNY - فكرني, We'll keep it fun and simple, promise! :D
+
+1. What is FAKARNY - فكرني?
+FAKARNY - فكرني is a helpful and secure app that stores all your account info, like usernames and passwords, safely encrypted and organized.
+
+2. Getting Started
+If you're new, create an account with a unique username and strong password. Already have an account? Just log in with your username and password!
+
+3. Main Interface
+You'll see two main sections:
+Left Panel: Search for your accounts, view details, and use buttons to delete, or copy usernames and passwords.
+Right Panel: Add or edit accounts by filling in the info and saving your changes.
+
+4. Keeping Your Accounts Safe
+When you copy a password, you'll need to enter your FAKARNY - فكرني password for extra security. Don't worry; you have three tries to get it right. If you enter the wrong password three times, the app will shut down to protect your data.
+
+5. Need Help?
+We're here for you! Reach out to our support team if you have questions or need assistance.
+That's it! Now you're ready to use FAKARNY - فكرني like a pro. Happy organizing! 🌟</value>
+  </data>
   <metadata name="Show_Name_Combobox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

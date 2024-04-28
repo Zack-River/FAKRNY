@@ -30,9 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FakarnyPage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Username_UnderLine_Panel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.Search_Textbox = new System.Windows.Forms.TextBox();
             this.Show_Name_Combobox = new System.Windows.Forms.ComboBox();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.Delete_Account_Button = new System.Windows.Forms.Button();
             this.View_Contents_Button = new System.Windows.Forms.Button();
             this.Copy_Password_Button = new System.Windows.Forms.Button();
             this.Copy_Username_Button = new System.Windows.Forms.Button();
@@ -40,7 +47,6 @@
             this.User_Id_Label = new System.Windows.Forms.Label();
             this.Name_Label = new System.Windows.Forms.Label();
             this.Add_Acc_Button = new System.Windows.Forms.Button();
-            this.Search_Textbox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.Accounts_List_Label = new System.Windows.Forms.Label();
@@ -48,6 +54,7 @@
             this.add_Account1 = new Fakarny.UserControls.Add_Account();
             this.edit_Account1 = new Fakarny.UserControls.Edit_Account();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel9.SuspendLayout();
             this.Tabs_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -55,11 +62,16 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.Username_UnderLine_Panel);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.Search_Textbox);
             this.panel1.Controls.Add(this.Show_Name_Combobox);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.Add_Acc_Button);
-            this.panel1.Controls.Add(this.Search_Textbox);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Accounts_List_Label);
@@ -68,35 +80,112 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(755, 681);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(53, 599);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(207, 46);
+            this.button3.TabIndex = 27;
+            this.button3.Text = "Complaints";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(283, 599);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(207, 46);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "Contact Us";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Username_UnderLine_Panel
+            // 
+            this.Username_UnderLine_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.Username_UnderLine_Panel.Location = new System.Drawing.Point(520, 50);
+            this.Username_UnderLine_Panel.Name = "Username_UnderLine_Panel";
+            this.Username_UnderLine_Panel.Size = new System.Drawing.Size(200, 1);
+            this.Username_UnderLine_Panel.TabIndex = 25;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Fakarny.Properties.Resources.Question_Mark;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 607);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 33);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox1.Location = new System.Drawing.Point(27, 245);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(698, 348);
+            this.textBox1.TabIndex = 23;
+            this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.WindowText;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = global::Fakarny.Properties.Resources.Search1;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.button1.Location = new System.Drawing.Point(468, 22);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(45, 41);
-            this.button1.TabIndex = 20;
+            this.button1.TabIndex = 22;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // Search_Textbox
+            // 
+            this.Search_Textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.Search_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Search_Textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_Textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.Search_Textbox.Location = new System.Drawing.Point(521, 27);
+            this.Search_Textbox.Name = "Search_Textbox";
+            this.Search_Textbox.Size = new System.Drawing.Size(207, 17);
+            this.Search_Textbox.TabIndex = 21;
+            this.Search_Textbox.Text = "Search Account";
+            this.Search_Textbox.TextChanged += new System.EventHandler(this.Search_Textbox_TextChanged);
+            this.Search_Textbox.Enter += new System.EventHandler(this.Search_Textbox_Enter);
+            this.Search_Textbox.Leave += new System.EventHandler(this.Search_Textbox_Leave);
             // 
             // Show_Name_Combobox
             // 
-            this.Show_Name_Combobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.Show_Name_Combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.Show_Name_Combobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.Show_Name_Combobox.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Show_Name_Combobox.ForeColor = System.Drawing.Color.White;
             this.Show_Name_Combobox.FormattingEnabled = true;
             this.Show_Name_Combobox.Location = new System.Drawing.Point(27, 207);
             this.Show_Name_Combobox.Name = "Show_Name_Combobox";
-            this.Show_Name_Combobox.Size = new System.Drawing.Size(445, 32);
+            this.Show_Name_Combobox.Size = new System.Drawing.Size(699, 33);
             this.Show_Name_Combobox.TabIndex = 19;
             this.Show_Name_Combobox.Text = "Choose Your Account From Here";
             this.Show_Name_Combobox.SelectionChangeCommitted += new System.EventHandler(this.Show_Name_Combobox_SelectionChangeCommitted);
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.Delete_Account_Button);
             this.panel9.Controls.Add(this.View_Contents_Button);
             this.panel9.Controls.Add(this.Copy_Password_Button);
             this.panel9.Controls.Add(this.Copy_Username_Button);
@@ -107,6 +196,21 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(701, 69);
             this.panel9.TabIndex = 18;
+            // 
+            // Delete_Account_Button
+            // 
+            this.Delete_Account_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.Delete_Account_Button.FlatAppearance.BorderSize = 0;
+            this.Delete_Account_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete_Account_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.Delete_Account_Button.ForeColor = System.Drawing.Color.White;
+            this.Delete_Account_Button.Location = new System.Drawing.Point(353, 3);
+            this.Delete_Account_Button.Name = "Delete_Account_Button";
+            this.Delete_Account_Button.Size = new System.Drawing.Size(82, 56);
+            this.Delete_Account_Button.TabIndex = 21;
+            this.Delete_Account_Button.Text = "Delete Account\r\n";
+            this.Delete_Account_Button.UseVisualStyleBackColor = false;
+            this.Delete_Account_Button.Click += new System.EventHandler(this.Delete_Account_Button_Click);
             // 
             // View_Contents_Button
             // 
@@ -164,22 +268,22 @@
             // User_Id_Label
             // 
             this.User_Id_Label.AutoSize = true;
-            this.User_Id_Label.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10F);
+            this.User_Id_Label.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.User_Id_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
             this.User_Id_Label.Location = new System.Drawing.Point(3, 38);
             this.User_Id_Label.Name = "User_Id_Label";
-            this.User_Id_Label.Size = new System.Drawing.Size(75, 18);
+            this.User_Id_Label.Size = new System.Drawing.Size(64, 17);
             this.User_Id_Label.TabIndex = 14;
             this.User_Id_Label.Text = "Username";
             // 
             // Name_Label
             // 
             this.Name_Label.AutoSize = true;
-            this.Name_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name_Label.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name_Label.ForeColor = System.Drawing.Color.White;
             this.Name_Label.Location = new System.Drawing.Point(3, 7);
             this.Name_Label.Name = "Name_Label";
-            this.Name_Label.Size = new System.Drawing.Size(84, 20);
+            this.Name_Label.Size = new System.Drawing.Size(90, 21);
             this.Name_Label.TabIndex = 14;
             this.Name_Label.Text = "App Name";
             // 
@@ -194,18 +298,6 @@
             this.Add_Acc_Button.Text = "Add Account";
             this.Add_Acc_Button.UseVisualStyleBackColor = true;
             this.Add_Acc_Button.Click += new System.EventHandler(this.Add_Acc_Button_Click_1);
-            // 
-            // Search_Textbox
-            // 
-            this.Search_Textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.Search_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Search_Textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search_Textbox.ForeColor = System.Drawing.Color.White;
-            this.Search_Textbox.Location = new System.Drawing.Point(521, 27);
-            this.Search_Textbox.Name = "Search_Textbox";
-            this.Search_Textbox.Size = new System.Drawing.Size(207, 24);
-            this.Search_Textbox.TabIndex = 4;
-            this.Search_Textbox.Text = "Search Account";
             // 
             // panel2
             // 
@@ -288,6 +380,7 @@
             this.Load += new System.EventHandler(this.FakarnyPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.Tabs_Panel.ResumeLayout(false);
@@ -301,7 +394,6 @@
         private System.Windows.Forms.FlowLayoutPanel Tabs_Panel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox Search_Textbox;
         private System.Windows.Forms.Button Add_Acc_Button;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button Copy_Username_Button;
@@ -313,6 +405,13 @@
         private UserControls.Edit_Account edit_Account1;
         private UserControls.Add_Account add_Account1;
         private System.Windows.Forms.ComboBox Show_Name_Combobox;
+        private System.Windows.Forms.Button Delete_Account_Button;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox Search_Textbox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel Username_UnderLine_Panel;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

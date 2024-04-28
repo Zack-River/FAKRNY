@@ -3,44 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\fakarny\\usercontrols\\add_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\usercontrols\\add_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\fakarny\\fakarnypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\fakarnypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|c:\\users\\zack river\\desktop\\fakrny\\fakarny\\fakarny\\usercontrols\\add_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\usercontrols\\add_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\fakarny\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|c:\\users\\zack river\\desktop\\fakrny\\fakarny\\fakarny\\usercontrols\\add_account.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\usercontrols\\add_account.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|c:\\users\\zack river\\desktop\\fakrny\\fakarny\\fakarny\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\fakarny\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\fakarny\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\fakarny\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\fakarny\\fakarnypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|c:\\users\\zack river\\desktop\\fakrny\\fakarny\\fakarny\\fakarnypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\fakarnypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\fakarny\\fakarnypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\fakarnypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|c:\\users\\zack river\\desktop\\fakrny\\fakarny\\fakarny\\usercontrols\\edit_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\usercontrols\\edit_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\fakarny\\usercontrols\\add_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\usercontrols\\add_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,105 +26,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SignUp.cs",
-              "DocumentMoniker": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\SignUp.cs",
-              "RelativeDocumentMoniker": "Fakarny\\SignUp.cs",
-              "ToolTip": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\SignUp.cs",
-              "RelativeToolTip": "Fakarny\\SignUp.cs",
-              "ViewState": "AQIAABwBAAAAAAAAAAAiwC4BAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T14:23:34.776Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Add_Account.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\UserControls\\Add_Account.Designer.cs",
-              "RelativeDocumentMoniker": "Fakarny\\UserControls\\Add_Account.Designer.cs",
-              "ToolTip": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\UserControls\\Add_Account.Designer.cs",
-              "RelativeToolTip": "Fakarny\\UserControls\\Add_Account.Designer.cs",
-              "ViewState": "AQIAAAcBAAAAAAAAAAAiwBoBAABcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T14:11:48.391Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LogIn.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\LogIn.cs",
-              "RelativeDocumentMoniker": "Fakarny\\LogIn.cs",
-              "ToolTip": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\LogIn.cs [Design]",
-              "RelativeToolTip": "Fakarny\\LogIn.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T13:44:39.757Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SignUp.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\SignUp.cs",
-              "RelativeDocumentMoniker": "Fakarny\\SignUp.cs",
-              "ToolTip": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\SignUp.cs [Design]",
-              "RelativeToolTip": "Fakarny\\SignUp.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T13:44:35.728Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Validation.cs",
-              "DocumentMoniker": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\Validation.cs",
-              "RelativeDocumentMoniker": "Fakarny\\Validation.cs",
-              "ToolTip": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\Validation.cs",
-              "RelativeToolTip": "Fakarny\\Validation.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAADwvy4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T13:41:16.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FakarnyPage.cs",
-              "DocumentMoniker": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\FakarnyPage.cs",
-              "RelativeDocumentMoniker": "Fakarny\\FakarnyPage.cs",
-              "ToolTip": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\FakarnyPage.cs",
-              "RelativeToolTip": "Fakarny\\FakarnyPage.cs",
-              "ViewState": "AQIAAGgAAAAAAAAAAAAowCwAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T13:41:16.065Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Validation.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\Validation.cs",
-              "RelativeDocumentMoniker": "Fakarny\\Validation.cs",
-              "ToolTip": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\Validation.cs [Design]",
-              "RelativeToolTip": "Fakarny\\Validation.cs [Design]",
+              "Title": "Edit_Account.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\UserControls\\Edit_Account.cs",
+              "RelativeDocumentMoniker": "Fakarny\\UserControls\\Edit_Account.cs",
+              "ToolTip": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\UserControls\\Edit_Account.cs [Design]",
+              "RelativeToolTip": "Fakarny\\UserControls\\Edit_Account.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T13:41:16.273Z",
+              "WhenOpened": "2024-04-28T17:29:26.776Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FakarnyPage.cs",
+              "DocumentMoniker": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\FakarnyPage.cs",
+              "RelativeDocumentMoniker": "Fakarny\\FakarnyPage.cs",
+              "ToolTip": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\FakarnyPage.cs",
+              "RelativeToolTip": "Fakarny\\FakarnyPage.cs",
+              "ViewState": "AQIAAAQBAAAAAAAAAADwvxYBAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T16:44:58.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Add_Account.cs",
               "DocumentMoniker": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\UserControls\\Add_Account.cs",
               "RelativeDocumentMoniker": "Fakarny\\UserControls\\Add_Account.cs",
               "ToolTip": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\UserControls\\Add_Account.cs",
               "RelativeToolTip": "Fakarny\\UserControls\\Add_Account.cs",
-              "ViewState": "AQIAADEBAAAAAAAAAAAUwDsBAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-28T13:41:16.277Z",
               "EditorCaption": ""
@@ -156,18 +69,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Add_Account.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\UserControls\\Add_Account.cs",
-              "RelativeDocumentMoniker": "Fakarny\\UserControls\\Add_Account.cs",
-              "ToolTip": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\UserControls\\Add_Account.cs [Design]",
-              "RelativeToolTip": "Fakarny\\UserControls\\Add_Account.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T13:41:16.278Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "FakarnyPage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\FakarnyPage.cs",
               "RelativeDocumentMoniker": "Fakarny\\FakarnyPage.cs",
