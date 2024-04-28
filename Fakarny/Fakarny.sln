@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fakarny", "Fakarny\Fakarny.csproj", "{95532FDD-B827-43DD-8CEB-0F9D693794B9}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Fakarny Installer", "Fakarny Installer\Fakarny Installer.vdproj", "{CF0B9145-2D96-442B-A4E0-4EB8BF1DAC46}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Fakarny Installer", "Fakarny Installer\Fakarny Installer.vdproj", "{A97DC397-8E1C-46A1-B96A-3CCC02931FA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{95532FDD-B827-43DD-8CEB-0F9D693794B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95532FDD-B827-43DD-8CEB-0F9D693794B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95532FDD-B827-43DD-8CEB-0F9D693794B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CF0B9145-2D96-442B-A4E0-4EB8BF1DAC46}.Debug|Any CPU.ActiveCfg = Debug
-		{CF0B9145-2D96-442B-A4E0-4EB8BF1DAC46}.Release|Any CPU.ActiveCfg = Release
+		{A97DC397-8E1C-46A1-B96A-3CCC02931FA8}.Debug|Any CPU.ActiveCfg = Debug
+		{A97DC397-8E1C-46A1-B96A-3CCC02931FA8}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
