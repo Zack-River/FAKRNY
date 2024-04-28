@@ -14,6 +14,11 @@ namespace Fakarny.UserControls
         public Add_Account()
         {
             InitializeComponent();
+            New_Name_Textbox.ReadOnly = true;
+            New_User_Id_Textbox.ReadOnly = true;
+            New_Password_Textbox.ReadOnly = true;
+            New_Phone_Textbox.ReadOnly = true;
+            New_Recovery_Email_Textbox.ReadOnly = true;
         }
 
         public string key
@@ -274,6 +279,59 @@ namespace Fakarny.UserControls
                 data = value;
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (Mode_Label.Text == "Read Only Mode")
+            {
+                Mode_Label.Location = new Point(220, 114);
+                Mode_Label.Text = "Edit Mode";
+                Mode_Label.ForeColor = Color.Lime;
+                New_Name_Textbox.ReadOnly = false;
+                New_User_Id_Textbox.ReadOnly = false;
+                New_Password_Textbox.ReadOnly = false;
+                New_Phone_Textbox.ReadOnly = false;
+                New_Recovery_Email_Textbox.ReadOnly = false;
+            }
+            else
+            {
+                Mode_Label.Location = new Point(203, 114);
+                Mode_Label.Text = "Read Only Mode";
+                Mode_Label.ForeColor = Color.Red;
+                New_Name_Textbox.ReadOnly = true;
+                New_User_Id_Textbox.ReadOnly = true;
+                New_Password_Textbox.ReadOnly = true;
+                New_Phone_Textbox.ReadOnly = true;
+                New_Recovery_Email_Textbox.ReadOnly = true;
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            if (Mode_Label.Text == "Read Only Mode")
+            {
+                Mode_Label.Location = new Point(220, 114);
+                Mode_Label.Text = "Edit Mode";
+                Mode_Label.ForeColor = Color.Lime;
+                New_Name_Textbox.ReadOnly = false;
+                New_User_Id_Textbox.ReadOnly = false;
+                New_Password_Textbox.ReadOnly = false;
+                New_Phone_Textbox.ReadOnly = false;
+                New_Recovery_Email_Textbox.ReadOnly = false;
+            }
+            else
+            {
+                Mode_Label.Location = new Point(203, 114);
+                Mode_Label.Text = "Read Only Mode";
+                Mode_Label.ForeColor = Color.Red;
+                New_Name_Textbox.ReadOnly = true;
+                New_User_Id_Textbox.ReadOnly = true;
+                New_Password_Textbox.ReadOnly = true;
+                New_Phone_Textbox.ReadOnly = true;
+                New_Recovery_Email_Textbox.ReadOnly = true;
+            }
+        }
+
         private void Add_Account_Load(object sender, EventArgs e)
         {
 

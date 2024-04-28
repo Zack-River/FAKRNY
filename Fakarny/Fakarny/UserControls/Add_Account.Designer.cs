@@ -65,6 +65,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.Account_Updated = new System.Windows.Forms.Label();
+            this.Mode_Label = new System.Windows.Forms.Label();
             this.panel17.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -83,6 +84,7 @@
             this.label1.Size = new System.Drawing.Size(146, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Edit Account";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel17
             // 
@@ -469,6 +471,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(50, 50);
             this.panel1.TabIndex = 39;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -492,11 +495,22 @@
             this.Account_Updated.Text = "Account Updated";
             this.Account_Updated.Visible = false;
             // 
+            // Mode_Label
+            // 
+            this.Mode_Label.AutoSize = true;
+            this.Mode_Label.ForeColor = System.Drawing.Color.Red;
+            this.Mode_Label.Location = new System.Drawing.Point(204, 114);
+            this.Mode_Label.Name = "Mode_Label";
+            this.Mode_Label.Size = new System.Drawing.Size(87, 13);
+            this.Mode_Label.TabIndex = 54;
+            this.Mode_Label.Text = "Read Only Mode";
+            // 
             // Add_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.Controls.Add(this.Mode_Label);
             this.Controls.Add(this.Account_Updated);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
@@ -569,5 +583,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label Account_Updated;
+        private System.Windows.Forms.Label Mode_Label;
     }
 }
