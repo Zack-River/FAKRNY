@@ -119,7 +119,7 @@
             this.pictureBox1.BackgroundImage = global::Fakarny.Properties.Resources.Question_Mark;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 607);
+            this.pictureBox1.Location = new System.Drawing.Point(27, 612);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 33);
             this.pictureBox1.TabIndex = 24;

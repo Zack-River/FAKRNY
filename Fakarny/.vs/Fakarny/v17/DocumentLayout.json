@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\fakarny\\fakarnypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|c:\\users\\zack river\\desktop\\fakrny\\fakarny\\fakarny\\fakarnypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\fakarnypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|c:\\users\\zack river\\desktop\\fakrny\\fakarny\\fakarny\\fakarnypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\fakarny\\fakarnypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\fakarnypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|c:\\users\\zack river\\desktop\\fakrny\\fakarny\\fakarny\\usercontrols\\edit_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\fakarny\\usercontrols\\edit_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{95532FDD-B827-43DD-8CEB-0F9D693794B9}|Fakarny\\Fakarny.csproj|solutionrelative:fakarny\\usercontrols\\edit_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -37,8 +37,7 @@
               "ToolTip": "C:\\Users\\Zack River\\Desktop\\FAKRNY\\Fakarny\\Fakarny\\UserControls\\Edit_Account.cs [Design]",
               "RelativeToolTip": "Fakarny\\UserControls\\Edit_Account.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T17:29:26.776Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-28T17:29:26.776Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "Fakarny\\UserControls\\Add_Account.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T13:41:16.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-28T13:41:16.277Z"
             },
             {
               "$type": "Document",
